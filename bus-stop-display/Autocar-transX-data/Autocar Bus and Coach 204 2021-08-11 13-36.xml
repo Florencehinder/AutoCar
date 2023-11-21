@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransXChange xmlns="http://www.transxchange.org.uk/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:apd="http://www.govtalk.gov.uk/people/AddressAndPersonalDetails" xsi:schemaLocation="http://www.transxchange.org.uk/ http://www.transxchange.org.uk/schema/2.4/TransXChange_registration.xsd" CreationDateTime='2021-08-11T13:42:45' ModificationDateTime='2021-08-11T13:42:45' Modification='new' RevisionNumber='0' FileName="U:\My Documents\BusOpendata\June2021_TXC PTI from website\Autocar updaes\Autocar Bus and Coach 2021-08-11 13-36\Autocar Bus and Coach 204 2021-08-11 13-36.xml" SchemaVersion="2.4" RegistrationDocument="false">
+
+<StopPoints>
+<AnnotatedStopPointRef><StopPointRef>2400A073520A</StopPointRef><CommonName>The Swan</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A060840A</StopPointRef><CommonName>Sponden Lane</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A036870A</StopPointRef><CommonName>Church</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240075596</StopPointRef><CommonName>Crossroads</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A036850A</StopPointRef><CommonName>Goddard's Green Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104380</StopPointRef><CommonName>Benenden Hospital</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A070620A</StopPointRef><CommonName>Castletons Oak</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023040A</StopPointRef><CommonName>The Weavers</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A072170A</StopPointRef><CommonName>Lime Kiln Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400102846</StopPointRef><CommonName>Bethersden Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104386</StopPointRef><CommonName>The Flying Horse</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A072680A</StopPointRef><CommonName>The Bell</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023060A</StopPointRef><CommonName>Gibbs Hill</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023070A</StopPointRef><CommonName>Railway Station</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023080A</StopPointRef><CommonName>George and Dragon</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104390</StopPointRef><CommonName>New Barn Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023090A</StopPointRef><CommonName>Layby</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022590A</StopPointRef><CommonName>The Harbour</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022570A</StopPointRef><CommonName>King's Head</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023110A</StopPointRef><CommonName>Warmlake Crossroads</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A036411A</StopPointRef><CommonName>The Plough</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240075185</StopPointRef><CommonName>The Potting Shed</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104366</StopPointRef><CommonName>Pear Tree Row</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400108947</StopPointRef><CommonName>Edmett Way</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104370</StopPointRef><CommonName>Car Showrooms</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001180A</StopPointRef><CommonName>Gore Court Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001170A</StopPointRef><CommonName>Willington Street</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001030A</StopPointRef><CommonName>Sutton Woods</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001000A</StopPointRef><CommonName>Sutton Road Morrisons</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000980A</StopPointRef><CommonName>Sutton Road Police HQ</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000970A</StopPointRef><CommonName>Grove Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000950A</StopPointRef><CommonName>Mangravet Avenue</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000930A</StopPointRef><CommonName>Longfield Place</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400107493</StopPointRef><CommonName>Sutton Road Cemetery</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004600A</StopPointRef><CommonName>The Wheatsheaf</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000891A</StopPointRef><CommonName>Armstrong Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400107495</StopPointRef><CommonName>Heather Drive</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000881A</StopPointRef><CommonName>Sheal's Crescent</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A003410A</StopPointRef><CommonName>Postley Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A003420A</StopPointRef><CommonName>Hayle Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A003430A</StopPointRef><CommonName>College Avenue</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A050690A</StopPointRef><CommonName>Chequers Bus Station</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000660A</StopPointRef><CommonName>Royal Star Arcade</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000720A</StopPointRef><CommonName>The Cannon</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A003440A</StopPointRef><CommonName>Lockmeadow</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000750A</StopPointRef><CommonName>Rocky Hill</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000710A</StopPointRef><CommonName>The Cannon</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000640A</StopPointRef><CommonName>Royal Star Arcade</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A050640A</StopPointRef><CommonName>Chequers Bus Station</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000860A</StopPointRef><CommonName>Lower Stone Street</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000870A</StopPointRef><CommonName>Waterloo Street</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000880A</StopPointRef><CommonName>Sheal's Crescent</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000890A</StopPointRef><CommonName>Armstrong Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000900A</StopPointRef><CommonName>Plains Avenue</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000910A</StopPointRef><CommonName>The Wheatsheaf</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000920A</StopPointRef><CommonName>Longfield Place</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000940A</StopPointRef><CommonName>Mangravet Avenue</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000960A</StopPointRef><CommonName>Grove Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000990A</StopPointRef><CommonName>Sutton Road Police HQ</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001010A</StopPointRef><CommonName>Sutton Road Morrisons</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001020A</StopPointRef><CommonName>Sutton Woods</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A001160A</StopPointRef><CommonName>Willington Street</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103352</StopPointRef><CommonName>Gore Court Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A060640A</StopPointRef><CommonName>Bircholt Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400108949</StopPointRef><CommonName>Edmett Way</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104368</StopPointRef><CommonName>Pear Tree Row</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240075183</StopPointRef><CommonName>The Potting Shed</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A073780A</StopPointRef><CommonName>Warmlake Crossroads</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022580A</StopPointRef><CommonName>King's Head</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022600A</StopPointRef><CommonName>The Harbour</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022610A</StopPointRef><CommonName>Layby</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A036430A</StopPointRef><CommonName>New Barn Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022640A</StopPointRef><CommonName>George and Dragon</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103198</StopPointRef><CommonName>Railway Station</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022660A</StopPointRef><CommonName>Gibbs Hill</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400102842</StopPointRef><CommonName>The Bell</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104388</StopPointRef><CommonName>The Flying Horse</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A072690A</StopPointRef><CommonName>Bethersden Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104384</StopPointRef><CommonName>Lime Kiln Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022670A</StopPointRef><CommonName>The Weavers</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104382</StopPointRef><CommonName>Castletons Oak</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A023560A</StopPointRef><CommonName>Benenden Hospital</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104378</StopPointRef><CommonName>Goddard's Green Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104374</StopPointRef><CommonName>Crossroads</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A036860A</StopPointRef><CommonName>Church</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A022860A</StopPointRef><CommonName>The Swan</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104335</StopPointRef><CommonName>The Woolpack</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004210A</StopPointRef><CommonName>Lyngs Close</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004220A</StopPointRef><CommonName>The George</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004130A</StopPointRef><CommonName>War Memorial</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240082588</StopPointRef><CommonName>Medway Avenue</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240098056</StopPointRef><CommonName>War Memorial</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004140A</StopPointRef><CommonName>Post Office</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004150A</StopPointRef><CommonName>The Chequers</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104966</StopPointRef><CommonName>Pikefish Lane</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104960</StopPointRef><CommonName>Five Furlongs Caravan Park</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240098058</StopPointRef><CommonName>The Elm Tree</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A013090A</StopPointRef><CommonName>Warrington Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104962</StopPointRef><CommonName>Waitrose</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400100574</StopPointRef><CommonName>Commercial Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A013060A</StopPointRef><CommonName>Commercial Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A013070A</StopPointRef><CommonName>Waitrose</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A013080A</StopPointRef><CommonName>St Andrews Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A072290A</StopPointRef><CommonName>The Elm Tree</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A073370A</StopPointRef><CommonName>Five Furlongs Caravan Park</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104964</StopPointRef><CommonName>Pikefish Lane</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004160A</StopPointRef><CommonName>The Chequers</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004170A</StopPointRef><CommonName>Post Office</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004180A</StopPointRef><CommonName>The George</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004190A</StopPointRef><CommonName>Lyngs Close</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A004200A</StopPointRef><CommonName>The Woolpack</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103619</StopPointRef><CommonName>The White Rock Inn</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A071280A</StopPointRef><CommonName>Grenadiers</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103623</StopPointRef><CommonName>Hildenbrook Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A060440A</StopPointRef><CommonName>Vines Lane East</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A030020A</StopPointRef><CommonName>Garlands</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400105243</StopPointRef><CommonName>Riding Park</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A060430A</StopPointRef><CommonName>Village Hall</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005760A</StopPointRef><CommonName>The Half Moon</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005770A</StopPointRef><CommonName>Coldharbour Lane</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A007340A</StopPointRef><CommonName>The Flying Dutchman</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>240097661</StopPointRef><CommonName>Stocks Green School</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103701</StopPointRef><CommonName>Copse Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005790A</StopPointRef><CommonName>Hilden Avenue</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005800A</StopPointRef><CommonName>Hilden Manor</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005810A</StopPointRef><CommonName>High Hilden Close</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005820A</StopPointRef><CommonName>Dry Hill Park Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005830A</StopPointRef><CommonName>Tonbridge School</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A000190A</StopPointRef><CommonName>Castle</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005980A</StopPointRef><CommonName>High Street</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005870A</StopPointRef><CommonName>Quarry Hill Parade</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A060980R</StopPointRef><CommonName>Quarry Hill Parade</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005860A</StopPointRef><CommonName>High Street</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A005850A</StopPointRef><CommonName>Castle</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006830A</StopPointRef><CommonName>Bordyke</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006840A</StopPointRef><CommonName>Mitre Court</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006850A</StopPointRef><CommonName>Cannon Lane</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006030A</StopPointRef><CommonName>Dry Hill Park Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006040A</StopPointRef><CommonName>High Hilden Close</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006050A</StopPointRef><CommonName>Hilden Manor</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006060A</StopPointRef><CommonName>BP Garage</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103699</StopPointRef><CommonName>Copse Road</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400104691</StopPointRef><CommonName>Brookmead</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A007350A</StopPointRef><CommonName>Stocks Green School</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006070A</StopPointRef><CommonName>The Flying Dutchman</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400102960</StopPointRef><CommonName>Coldharbour Lane</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A006080A</StopPointRef><CommonName>The Half Moon</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A060420A</StopPointRef><CommonName>Village Hall</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A030040A</StopPointRef><CommonName>Riding Park</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A030030A</StopPointRef><CommonName>Garlands</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A071510A</StopPointRef><CommonName>Vines Lane East</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A070770A</StopPointRef><CommonName>Hildenbrook Farm</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400103621</StopPointRef><CommonName>Grenadiers</CommonName></AnnotatedStopPointRef>
+<AnnotatedStopPointRef><StopPointRef>2400A030000A</StopPointRef><CommonName>The White Rock Inn</CommonName></AnnotatedStopPointRef></StopPoints>
+
+<RouteSections>
+<RouteSection id='routeSection_10' CreationDateTime='2021-08-11T13:41:50' ModificationDateTime='2021-08-11T13:41:50' Modification='new' RevisionNumber='0'>
+<RouteLink id='routeSection_10_1'><From><StopPointRef>2400103619</StopPointRef></From><To><StopPointRef>2400A071280A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_2'><From><StopPointRef>2400A071280A</StopPointRef></From><To><StopPointRef>2400103623</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_3'><From><StopPointRef>2400103623</StopPointRef></From><To><StopPointRef>2400A060440A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_4'><From><StopPointRef>2400A060440A</StopPointRef></From><To><StopPointRef>2400A030020A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_5'><From><StopPointRef>2400A030020A</StopPointRef></From><To><StopPointRef>2400105243</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_6'><From><StopPointRef>2400105243</StopPointRef></From><To><StopPointRef>2400A060430A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_7'><From><StopPointRef>2400A060430A</StopPointRef></From><To><StopPointRef>2400A005760A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_8'><From><StopPointRef>2400A005760A</StopPointRef></From><To><StopPointRef>2400A005770A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_9'><From><StopPointRef>2400A005770A</StopPointRef></From><To><StopPointRef>2400A007340A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_10'><From><StopPointRef>2400A007340A</StopPointRef></From><To><StopPointRef>240097661</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_11'><From><StopPointRef>240097661</StopPointRef></From><To><StopPointRef>2400103701</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_12'><From><StopPointRef>2400103701</StopPointRef></From><To><StopPointRef>2400A005790A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_13'><From><StopPointRef>2400A005790A</StopPointRef></From><To><StopPointRef>2400A005800A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_14'><From><StopPointRef>2400A005800A</StopPointRef></From><To><StopPointRef>2400A005810A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_15'><From><StopPointRef>2400A005810A</StopPointRef></From><To><StopPointRef>2400A005820A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_16'><From><StopPointRef>2400A005820A</StopPointRef></From><To><StopPointRef>2400A005830A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_17'><From><StopPointRef>2400A005830A</StopPointRef></From><To><StopPointRef>2400A000190A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_18'><From><StopPointRef>2400A000190A</StopPointRef></From><To><StopPointRef>2400A005980A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_10_19'><From><StopPointRef>2400A005980A</StopPointRef></From><To><StopPointRef>2400A005870A</StopPointRef></To></RouteLink>
+</RouteSection>
+<RouteSection id='routeSection_11' CreationDateTime='2021-08-11T13:42:42' ModificationDateTime='2021-08-11T13:42:42' Modification='new' RevisionNumber='0'>
+<RouteLink id='routeSection_11_1'><From><StopPointRef>2400A060980R</StopPointRef></From><To><StopPointRef>2400A005860A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_2'><From><StopPointRef>2400A005860A</StopPointRef></From><To><StopPointRef>2400A005850A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_3'><From><StopPointRef>2400A005850A</StopPointRef></From><To><StopPointRef>2400A006830A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_4'><From><StopPointRef>2400A006830A</StopPointRef></From><To><StopPointRef>2400A006840A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_5'><From><StopPointRef>2400A006840A</StopPointRef></From><To><StopPointRef>2400A006850A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_6'><From><StopPointRef>2400A006850A</StopPointRef></From><To><StopPointRef>2400A006030A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_7'><From><StopPointRef>2400A006030A</StopPointRef></From><To><StopPointRef>2400A006040A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_8'><From><StopPointRef>2400A006040A</StopPointRef></From><To><StopPointRef>2400A006050A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_9'><From><StopPointRef>2400A006050A</StopPointRef></From><To><StopPointRef>2400A006060A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_10'><From><StopPointRef>2400A006060A</StopPointRef></From><To><StopPointRef>2400103699</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_11'><From><StopPointRef>2400103699</StopPointRef></From><To><StopPointRef>2400104691</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_12'><From><StopPointRef>2400104691</StopPointRef></From><To><StopPointRef>2400A007350A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_13'><From><StopPointRef>2400A007350A</StopPointRef></From><To><StopPointRef>2400A006070A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_14'><From><StopPointRef>2400A006070A</StopPointRef></From><To><StopPointRef>2400102960</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_15'><From><StopPointRef>2400102960</StopPointRef></From><To><StopPointRef>2400A006080A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_16'><From><StopPointRef>2400A006080A</StopPointRef></From><To><StopPointRef>2400A060420A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_17'><From><StopPointRef>2400A060420A</StopPointRef></From><To><StopPointRef>2400A030040A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_18'><From><StopPointRef>2400A030040A</StopPointRef></From><To><StopPointRef>2400A030030A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_19'><From><StopPointRef>2400A030030A</StopPointRef></From><To><StopPointRef>2400A071510A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_20'><From><StopPointRef>2400A071510A</StopPointRef></From><To><StopPointRef>2400A070770A</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_21'><From><StopPointRef>2400A070770A</StopPointRef></From><To><StopPointRef>2400103621</StopPointRef></To></RouteLink>
+<RouteLink id='routeSection_11_22'><From><StopPointRef>2400103621</StopPointRef></From><To><StopPointRef>2400A030000A</StopPointRef></To></RouteLink>
+</RouteSection>
+</RouteSections>
+
+<Routes>
+<Route id='route_10' CreationDateTime='2021-08-11T13:41:50' ModificationDateTime='2021-08-11T13:41:50' Modification='new' RevisionNumber='0'><Description>The White Rock Inn - Quarry Hill Parade</Description><RouteSectionRef>routeSection_10</RouteSectionRef></Route>
+<Route id='route_11' CreationDateTime='2021-08-11T13:42:42' ModificationDateTime='2021-08-11T13:42:42' Modification='new' RevisionNumber='0'><Description>Quarry Hill Parade - The White Rock Inn</Description><RouteSectionRef>routeSection_11</RouteSectionRef></Route>
+</Routes>
+
+<JourneyPatternSections>
+<JourneyPatternSection id='JPS_10' CreationDateTime='2021-08-11T13:42:45' ModificationDateTime='2021-08-11T13:42:45' Modification='new' RevisionNumber='0'>
+
+<JourneyPatternTimingLink id='JPS_10_1'>
+<From SequenceNumber='1'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103619</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='2'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A071280A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_1</RouteLinkRef><RunTime>PT300S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_2'>
+<From SequenceNumber='2'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A071280A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='3'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103623</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_2</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_3'>
+<From SequenceNumber='3'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103623</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='4'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060440A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_3</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_4'>
+<From SequenceNumber='4'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060440A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='5'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030020A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_4</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_5'>
+<From SequenceNumber='5'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030020A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='6'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400105243</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_5</RouteLinkRef><RunTime>PT180S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_6'>
+<From SequenceNumber='6'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400105243</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='7'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060430A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_6</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_7'>
+<From SequenceNumber='7'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060430A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='8'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005760A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_7</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_8'>
+<From SequenceNumber='8'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005760A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='9'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005770A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_8</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_9'>
+<From SequenceNumber='9'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005770A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='10'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A007340A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_9</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_10'>
+<From SequenceNumber='10'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A007340A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='11'><Activity>pickUpAndSetDown</Activity><StopPointRef>240097661</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_10</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_11'>
+<From SequenceNumber='11'><Activity>pickUpAndSetDown</Activity><StopPointRef>240097661</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='12'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103701</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_11</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_12'>
+<From SequenceNumber='12'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103701</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='13'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005790A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_12</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_13'>
+<From SequenceNumber='13'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005790A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='14'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005800A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_13</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_14'>
+<From SequenceNumber='14'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005800A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='15'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005810A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_14</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_15'>
+<From SequenceNumber='15'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005810A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='16'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005820A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_15</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_16'>
+<From SequenceNumber='16'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005820A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='17'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005830A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_16</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_17'>
+<From SequenceNumber='17'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005830A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='18'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A000190A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_17</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_18'>
+<From SequenceNumber='18'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A000190A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='19'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005980A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_10_18</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_10_19'>
+<From SequenceNumber='19'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005980A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='20'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005870A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_10_19</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+</JourneyPatternSection>
+
+<JourneyPatternSection id='JPS_11' CreationDateTime='2021-08-11T13:42:45' ModificationDateTime='2021-08-11T13:42:45' Modification='new' RevisionNumber='0'>
+
+<JourneyPatternTimingLink id='JPS_11_1'>
+<From SequenceNumber='1'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060980R</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='2'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005860A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_1</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_2'>
+<From SequenceNumber='2'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005860A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='3'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005850A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_2</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_3'>
+<From SequenceNumber='3'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A005850A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='4'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006830A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_3</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_4'>
+<From SequenceNumber='4'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006830A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='5'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006840A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_4</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_5'>
+<From SequenceNumber='5'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006840A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='6'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006850A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_5</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_6'>
+<From SequenceNumber='6'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006850A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='7'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006030A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_6</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_7'>
+<From SequenceNumber='7'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006030A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='8'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006040A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_7</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_8'>
+<From SequenceNumber='8'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006040A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='9'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006050A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_8</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_9'>
+<From SequenceNumber='9'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006050A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='10'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006060A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_9</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_10'>
+<From SequenceNumber='10'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006060A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='11'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103699</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_10</RouteLinkRef><RunTime>PT120S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_11'>
+<From SequenceNumber='11'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103699</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='12'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400104691</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_11</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_12'>
+<From SequenceNumber='12'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400104691</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='13'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A007350A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_12</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_13'>
+<From SequenceNumber='13'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A007350A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='14'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006070A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_13</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_14'>
+<From SequenceNumber='14'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006070A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='15'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400102960</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_14</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_15'>
+<From SequenceNumber='15'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400102960</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='16'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006080A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_15</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_16'>
+<From SequenceNumber='16'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A006080A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='17'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060420A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_16</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_17'>
+<From SequenceNumber='17'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A060420A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='18'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030040A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_17</RouteLinkRef><RunTime>PT0S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_18'>
+<From SequenceNumber='18'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030040A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='19'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030030A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_18</RouteLinkRef><RunTime>PT180S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_19'>
+<From SequenceNumber='19'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030030A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='20'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A071510A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_19</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_20'>
+<From SequenceNumber='20'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A071510A</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='21'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A070770A</StopPointRef><TimingStatus>TIP</TimingStatus></To><RouteLinkRef>routeSection_11_20</RouteLinkRef><RunTime>PT60S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_21'>
+<From SequenceNumber='21'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A070770A</StopPointRef><TimingStatus>TIP</TimingStatus></From>
+<To SequenceNumber='22'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103621</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_21</RouteLinkRef><RunTime>PT180S</RunTime>
+</JourneyPatternTimingLink>
+<JourneyPatternTimingLink id='JPS_11_22'>
+<From SequenceNumber='22'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400103621</StopPointRef><TimingStatus>PTP</TimingStatus></From>
+<To SequenceNumber='23'><Activity>pickUpAndSetDown</Activity><StopPointRef>2400A030000A</StopPointRef><TimingStatus>PTP</TimingStatus></To><RouteLinkRef>routeSection_11_22</RouteLinkRef><RunTime>PT300S</RunTime>
+</JourneyPatternTimingLink>
+</JourneyPatternSection>
+</JourneyPatternSections>
+
+<Operators><Operator id="OId_AUTO"><NationalOperatorCode>AUTO</NationalOperatorCode><OperatorCode>AUTO</OperatorCode><OperatorShortName>Autocar Bus and Coach</OperatorShortName><LicenceNumber>PK1001144</LicenceNumber></Operator></Operators>
+
+<Services>
+<Service CreationDateTime='2021-08-11T13:42:45' ModificationDateTime='2021-08-11T13:42:45' Modification='new' RevisionNumber='0'>
+<ServiceCode>PK1001144:20</ServiceCode><Lines><Line id="AUTO:PK1001144:20:204"><LineName>204</LineName><OutboundDescription><Origin>The White Rock Inn</Origin><Destination>Quarry Hill Parade</Destination><Description>The White Rock Inn - Quarry Hill Parade</Description></OutboundDescription><InboundDescription><Origin>Quarry Hill Parade</Origin><Destination>The White Rock Inn</Destination><Description>Quarry Hill Parade - The White Rock Inn</Description></InboundDescription></Line></Lines>
+<OperatingPeriod><StartDate>2020-10-21</StartDate><EndDate>2022-10-28</EndDate></OperatingPeriod>
+
+<RegisteredOperatorRef>regAUTO</RegisteredOperatorRef>
+
+<StopRequirements>
+<NoNewStopsRequired/>
+</StopRequirements>
+
+<Mode>bus</Mode><PublicUse>1</PublicUse><Description>Quarry Hill Parade - The White Rock Inn</Description>
+
+<StandardService>
+<Origin>Quarry Hill Parade</Origin>
+<Destination>The White Rock Inn</Destination>
+<JourneyPattern id='JP_10'><DestinationDisplay>Quarry Hill Parade</DestinationDisplay><OperatorRef>OId_AUTO</OperatorRef><Direction>outbound</Direction><RouteRef>route_10</RouteRef><JourneyPatternSectionRefs>JPS_10</JourneyPatternSectionRefs></JourneyPattern>
+<JourneyPattern id='JP_11'><DestinationDisplay>The White Rock Inn</DestinationDisplay><OperatorRef>OId_AUTO</OperatorRef><Direction>inbound</Direction><RouteRef>route_11</RouteRef><JourneyPatternSectionRefs>JPS_11</JourneyPatternSectionRefs></JourneyPattern>
+
+</StandardService>
+</Service>
+
+</Services>
+
+<VehicleJourneys>
+<VehicleJourney CreationDateTime='2021-08-11T13:41:50' ModificationDateTime='2021-08-11T13:41:50' Modification='new' RevisionNumber='0'>
+
+
+<OperatorRef>AUTO</OperatorRef>
+<Operational>
+<Block><Description>204</Description><BlockNumber>204</BlockNumber></Block>
+</Operational>
+<OperatingProfile>
+<RegularDayType><DaysOfWeek><Monday/></DaysOfWeek></RegularDayType>
+<SpecialDaysOperation>
+
+
+<DaysOfNonOperation>
+<DateRange><StartDate>2020-12-28</StartDate><EndDate>2020-12-28</EndDate></DateRange><DateRange><StartDate>2021-04-05</StartDate><EndDate>2021-04-05</EndDate></DateRange><DateRange><StartDate>2021-05-03</StartDate><EndDate>2021-05-03</EndDate></DateRange><DateRange><StartDate>2021-05-31</StartDate><EndDate>2021-05-31</EndDate></DateRange><DateRange><StartDate>2021-08-30</StartDate><EndDate>2021-08-30</EndDate></DateRange>
+</DaysOfNonOperation>
+</SpecialDaysOperation>
+<BankHolidayOperation>
+
+<DaysOfNonOperation><ChristmasDay/><BoxingDay/><GoodFriday/><NewYearsDay/><LateSummerBankHolidayNotScotland/><MayDay/><EasterMonday/><SpringBank/><ChristmasDayHoliday/><BoxingDayHoliday/><NewYearsDayHoliday/><ChristmasEve/><NewYearsEve/></DaysOfNonOperation>
+</BankHolidayOperation>
+</OperatingProfile>
+
+<VehicleJourneyCode>VJ_24</VehicleJourneyCode>
+<ServiceRef>PK1001144:20</ServiceRef><LineRef>AUTO:PK1001144:20:204</LineRef>
+<JourneyPatternRef>JP_10</JourneyPatternRef>
+<DepartureTime>10:31:00</DepartureTime>
+</VehicleJourney>
+
+<VehicleJourney CreationDateTime='2021-08-11T13:41:52' ModificationDateTime='2021-08-11T13:41:52' Modification='new' RevisionNumber='0'>
+
+
+<OperatorRef>AUTO</OperatorRef>
+<Operational>
+<Block><Description>204</Description><BlockNumber>204</BlockNumber></Block>
+</Operational>
+<OperatingProfile>
+<RegularDayType><DaysOfWeek><Monday/></DaysOfWeek></RegularDayType>
+<SpecialDaysOperation>
+
+
+<DaysOfNonOperation>
+<DateRange><StartDate>2020-12-28</StartDate><EndDate>2020-12-28</EndDate></DateRange><DateRange><StartDate>2021-04-05</StartDate><EndDate>2021-04-05</EndDate></DateRange><DateRange><StartDate>2021-05-03</StartDate><EndDate>2021-05-03</EndDate></DateRange><DateRange><StartDate>2021-05-31</StartDate><EndDate>2021-05-31</EndDate></DateRange><DateRange><StartDate>2021-08-30</StartDate><EndDate>2021-08-30</EndDate></DateRange>
+</DaysOfNonOperation>
+</SpecialDaysOperation>
+<BankHolidayOperation>
+
+<DaysOfNonOperation><ChristmasDay/><BoxingDay/><GoodFriday/><NewYearsDay/><LateSummerBankHolidayNotScotland/><MayDay/><EasterMonday/><SpringBank/><ChristmasDayHoliday/><BoxingDayHoliday/><NewYearsDayHoliday/><ChristmasEve/><NewYearsEve/></DaysOfNonOperation>
+</BankHolidayOperation>
+</OperatingProfile>
+
+<VehicleJourneyCode>VJ_25</VehicleJourneyCode>
+<ServiceRef>PK1001144:20</ServiceRef><LineRef>AUTO:PK1001144:20:204</LineRef>
+<JourneyPatternRef>JP_10</JourneyPatternRef>
+<DepartureTime>13:31:00</DepartureTime>
+</VehicleJourney>
+
+<VehicleJourney CreationDateTime='2021-08-11T13:42:42' ModificationDateTime='2021-08-11T13:42:42' Modification='new' RevisionNumber='0'>
+
+
+<OperatorRef>AUTO</OperatorRef>
+<Operational>
+<Block><Description>204</Description><BlockNumber>204</BlockNumber></Block>
+</Operational>
+<OperatingProfile>
+<RegularDayType><DaysOfWeek><Monday/></DaysOfWeek></RegularDayType>
+<SpecialDaysOperation>
+
+
+<DaysOfNonOperation>
+<DateRange><StartDate>2020-12-28</StartDate><EndDate>2020-12-28</EndDate></DateRange><DateRange><StartDate>2021-04-05</StartDate><EndDate>2021-04-05</EndDate></DateRange><DateRange><StartDate>2021-05-03</StartDate><EndDate>2021-05-03</EndDate></DateRange><DateRange><StartDate>2021-05-31</StartDate><EndDate>2021-05-31</EndDate></DateRange><DateRange><StartDate>2021-08-30</StartDate><EndDate>2021-08-30</EndDate></DateRange>
+</DaysOfNonOperation>
+</SpecialDaysOperation>
+<BankHolidayOperation>
+
+<DaysOfNonOperation><ChristmasDay/><BoxingDay/><GoodFriday/><NewYearsDay/><LateSummerBankHolidayNotScotland/><MayDay/><EasterMonday/><SpringBank/><ChristmasDayHoliday/><BoxingDayHoliday/><NewYearsDayHoliday/><ChristmasEve/><NewYearsEve/></DaysOfNonOperation>
+</BankHolidayOperation>
+</OperatingProfile>
+
+<VehicleJourneyCode>VJ_26</VehicleJourneyCode>
+<ServiceRef>PK1001144:20</ServiceRef><LineRef>AUTO:PK1001144:20:204</LineRef>
+<JourneyPatternRef>JP_11</JourneyPatternRef>
+<DepartureTime>10:00:00</DepartureTime>
+</VehicleJourney>
+
+<VehicleJourney CreationDateTime='2021-08-11T13:42:45' ModificationDateTime='2021-08-11T13:42:45' Modification='new' RevisionNumber='0'>
+
+
+<OperatorRef>AUTO</OperatorRef>
+<Operational>
+<Block><Description>204</Description><BlockNumber>204</BlockNumber></Block>
+</Operational>
+<OperatingProfile>
+<RegularDayType><DaysOfWeek><Monday/></DaysOfWeek></RegularDayType>
+<SpecialDaysOperation>
+
+
+<DaysOfNonOperation>
+<DateRange><StartDate>2020-12-28</StartDate><EndDate>2020-12-28</EndDate></DateRange><DateRange><StartDate>2021-04-05</StartDate><EndDate>2021-04-05</EndDate></DateRange><DateRange><StartDate>2021-05-03</StartDate><EndDate>2021-05-03</EndDate></DateRange><DateRange><StartDate>2021-05-31</StartDate><EndDate>2021-05-31</EndDate></DateRange><DateRange><StartDate>2021-08-30</StartDate><EndDate>2021-08-30</EndDate></DateRange>
+</DaysOfNonOperation>
+</SpecialDaysOperation>
+<BankHolidayOperation>
+
+<DaysOfNonOperation><ChristmasDay/><BoxingDay/><GoodFriday/><NewYearsDay/><LateSummerBankHolidayNotScotland/><MayDay/><EasterMonday/><SpringBank/><ChristmasDayHoliday/><BoxingDayHoliday/><NewYearsDayHoliday/><ChristmasEve/><NewYearsEve/></DaysOfNonOperation>
+</BankHolidayOperation>
+</OperatingProfile>
+
+<VehicleJourneyCode>VJ_27</VehicleJourneyCode>
+<ServiceRef>PK1001144:20</ServiceRef><LineRef>AUTO:PK1001144:20:204</LineRef>
+<JourneyPatternRef>JP_11</JourneyPatternRef>
+<DepartureTime>13:00:00</DepartureTime>
+</VehicleJourney>
+
+
+</VehicleJourneys>
+</TransXChange>
