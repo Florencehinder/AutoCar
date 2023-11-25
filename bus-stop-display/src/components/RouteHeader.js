@@ -1,10 +1,19 @@
 // RouteHeader.js
-import React from "react";
+import { Swap } from "phosphor-react";
+import React, { useState } from "react";
 
-const RouteHeader = ({ route, destination }) => {
+const RouteHeader = ({ route, origin, destination }) => {
+  const [reverse, setReverse] = useState(false);
+  const _destination = reverse ? origin : destination;
+
   return (
-    <div className="w-full bg-blue-500 text-white p-8 text-10xl">
-      {route} to {destination}
+    <div className="flex w-full bg-blue-500 text-white p-10 text-6xl justify-between">
+      <p>
+        {route} to {_destination}
+      </p>
+      <button onClick={() => setReverse((prevState) => !prevState)}>
+        <Swap />
+      </button>
     </div>
   );
 };
