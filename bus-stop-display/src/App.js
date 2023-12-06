@@ -47,8 +47,12 @@ function App() {
   );
 
   //// Things to still add:
-  // - Route Line Displayed
-  // - Play Audio when within 150 ms
+  // Link R_3 to Castle - Waitrose
+  // Link R_11 Waistrose - Castle
+  // Add a "start button"
+  // Plot the line between two stops for the route
+  // Calculate the difference between the last latitude of the route segment and the first stop  of the next segment then switch to the next route segment. 
+  // Play Audio when within 150 ms
 
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
