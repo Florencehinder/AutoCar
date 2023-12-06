@@ -3,23 +3,27 @@ import KentNaptanData from "./data/naptan/240.json" assert { type: "json" };
 
 export function createBusData() {
   const data = [];
+
   for (const path of TwoOhFiveRoute.TransXChange.StopPoints
     .AnnotatedStopPointRef) {
-    const naptanData = KentNaptanData.NaPTAN.StopPoints.StopPoint.find(
-      (point) => {
-        return point.AtcoCode == path.StopPointRef;
+    try {
+      const naptanData = KentNaptanData.NaPTAN.StopPoints.StopPoint.find(
+        (point) => {
+          return point.AtcoCode == path?.StopPointRef;
+        }
+      );
+      if (naptanData) {
+        data.push({
+          name: path.CommonName,
+          atcoCode: naptanData.AtcoCode,
+          naptanCode: naptanData.NaptanCode,
+          lat: naptanData.Place.Location.Translation.Latitude,
+          long: naptanData.Place.Location.Translation.Longitude,
+        });
+        continue;
       }
-    );
-
-    if (naptanData) {
-      data.push({
-        name: path.CommonName,
-        atcoCode: naptanData.AtcoCode,
-        naptanCode: naptanData.NaptanCode,
-        lat: naptanData.Place.Location.Translation.Latitude,
-        long: naptanData.Place.Location.Translation.Longitude,
-      });
-      return;
+    } catch (e) {
+      console.error(e);
     }
 
     console.warn(
@@ -30,4 +34,4 @@ export function createBusData() {
   return data;
 }
 
-createBusData();
+console.log(createBusData());

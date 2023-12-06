@@ -22,7 +22,7 @@ const HandleMapClick = ({ setCoordinates }) => {
   return null; // Component does not render anything
 };
 
-const CustomMapContainer = ({ BusStops }) => {
+const CustomMapContainer = ({ busStops }) => {
   const [geolocation, setGeolocation] = useState({
     lat: 51.18153,
     long: 0.38451,
@@ -86,14 +86,14 @@ const CustomMapContainer = ({ BusStops }) => {
 
   return (
     <MapContainer
-      center={[BusStops.custom[0].lat, BusStops.custom[0].long]}
+      center={[busStops[0].lat, busStops[0].long]}
       zoom={14}
       style={{ height: "100vh", width: "100vw" }}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <HandleMapClick setCoordinates={setGeolocation} />
       <Marker position={[geolocation.lat, geolocation.long]} icon={busIcon} />
-      {BusStops.custom.map((stop, index) => (
+      {busStops.map((stop, index) => (
         <Marker
           key={index}
           position={[stop.lat, stop.long]}
