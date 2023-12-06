@@ -16,8 +16,9 @@ function App() {
     lat: 51.18153,
     long: 0.38451,
   });
-  const nextStop = { lat: 51.174772, long: 0.377919 };
-
+  const currentStop = stops[0];
+  const nextStop = stops[2];
+  console.log(nextStop);
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
 
@@ -32,13 +33,19 @@ function App() {
 
     // Update the distance state
     setDistanceToNextStop(distance);
-  }, [geolocation]); // Recalculate if the geolocation changes
+  }, [
+    currentStop.lat,
+    currentStop.long,
+    geolocation,
+    nextStop.lat,
+    nextStop.long,
+  ]); // Recalculate if the geolocation changes
 
   const handleGeolocation = useCallback(
     (lat, long) => setGeolocation({ lat, long }),
     []
   );
-  console.log(geolocation);
+
   //// Things to still add:
   // - Route Line Displayed
   // - Play Audio when within 150 ms
@@ -67,7 +74,7 @@ function App() {
             onMapClick={handleGeolocation}
           />
         ) : (
-          <CurrentStop stopName={stops[0].name} />
+          <CurrentStop stopName={currentStop.name} />
         )}
       </div>
     </div>

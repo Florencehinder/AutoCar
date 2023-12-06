@@ -2,7 +2,14 @@ import React, { useEffect, useRef } from "react";
 import { Bus } from "phosphor-react";
 import L from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
-import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
+import { lineData205 } from "../data/custom/205-line-route";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  useMapEvents,
+  Polyline,
+} from "react-leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
 const busIconMarkup = renderToStaticMarkup(<Bus size={24} />);
@@ -90,6 +97,7 @@ const CustomMapContainer = ({ busStops, geolocation, onMapClick }) => {
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <HandleMapClick setCoordinates={onMapClick} />
       <Marker position={[geolocation.lat, geolocation.long]} icon={busIcon} />
+      <Polyline pathOptions={{ color: "blue" }} positions={lineData205} />
       {busStops.map((stop, index) => (
         <Marker
           key={index}
