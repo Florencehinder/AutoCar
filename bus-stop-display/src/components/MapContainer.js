@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Bus } from "phosphor-react";
 import L from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -16,32 +16,29 @@ const HandleMapClick = ({ setCoordinates }) => {
   useMapEvents({
     click(e) {
       const { lat, lng } = e.latlng;
-      setCoordinates({ lat: lat, long: lng });
+      setCoordinates(lat, lng);
     },
   });
   return null; // Component does not render anything
 };
 
-const CustomMapContainer = ({ busStops }) => {
-  const [geolocation, setGeolocation] = useState({
-    lat: 51.18153,
-    long: 0.38451,
-  });
-
+const CustomMapContainer = ({ busStops, geolocation, onMapClick }) => {
   const watchIdRef = useRef(null);
   const MAX_READINGS = 10;
   const readingsQueueRef = useRef([]);
 
   useEffect(() => {
     const updateLocation = (newLat, newLong) => {
-      setGeolocation({ lat: newLat, long: newLong });
+      onMapClick(newLat, newLong);
     };
 
     if (navigator.geolocation) {
       watchIdRef.current = navigator.geolocation.watchPosition(
         (position) => {
           const { latitude, longitude, accuracy } = position.coords;
+
           if (!isNaN(latitude) && !isNaN(longitude)) {
+            console.log("CALLED");
             const newReading = { latitude, longitude, accuracy };
             readingsQueueRef.current.push(newReading);
 
@@ -82,7 +79,7 @@ const CustomMapContainer = ({ busStops }) => {
         navigator.geolocation.clearWatch(watchIdRef.current);
       }
     };
-  }, []);
+  }, [onMapClick]);
 
   return (
     <MapContainer
@@ -91,7 +88,7 @@ const CustomMapContainer = ({ busStops }) => {
       style={{ height: "100vh", width: "100vw" }}
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-      <HandleMapClick setCoordinates={setGeolocation} />
+      <HandleMapClick setCoordinates={onMapClick} />
       <Marker position={[geolocation.lat, geolocation.long]} icon={busIcon} />
       {busStops.map((stop, index) => (
         <Marker

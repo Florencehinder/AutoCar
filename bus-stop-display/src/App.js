@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import RouteHeader from "./components/RouteHeader"; // Adjust the path as necessary
 import CurrentStop from "./components/CurrentStop"; // Adjust the path as necessary
 import MapContainer from "./components/MapContainer";
@@ -11,8 +11,16 @@ function App() {
   const [showMap, setShowMap] = useState(false);
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.inbound : BusStops.outbound;
-  const geolocation = { lat: 51.18153, long: 0.38451 };
+  const [geolocation, setGeolocation] = useState({
+    lat: 51.18153,
+    long: 0.38451,
+  });
 
+  const handleGeolocation = useCallback(
+    (lat, long) => setGeolocation({ lat, long }),
+    []
+  );
+  console.log(geolocation);
   //// Things to still add:
   // - Current GPS coordinates
   // - Route Line Displayed
@@ -30,10 +38,13 @@ function App() {
         destination={line.OutboundDescription.Destination}
         reverse={reverse}
       />
-
       <div className="h-full w-full relative">
         {showMap ? (
-          <MapContainer busStops={stops} geolocation={geolocation} />
+          <MapContainer
+            busStops={stops}
+            geolocation={geolocation}
+            onMapClick={handleGeolocation}
+          />
         ) : (
           <CurrentStop stopName={stops[0].name} />
         )}
