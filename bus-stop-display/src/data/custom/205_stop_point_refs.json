@@ -1,267 +1,278 @@
 {
   "inbound": [
     {
+      "directionIndex": 0,
       "name": "Castle",
       "atcoCode": "2400A000190A",
       "naptanCode": "kntadjta",
-      "lat": 51.196757,
-      "long": 0.2754157
+      "lat": "51.1967570",
+      "long": "0.2754157"
     },
     {
+      "directionIndex": 1,
       "name": "High Street",
       "atcoCode": "2400A005980A",
       "naptanCode": "kntajapg",
-      "lat": 51.1926082,
-      "long": 0.2723201
+      "lat": "51.1926082",
+      "long": "0.2723201"
     },
     {
+      "directionIndex": 2,
       "name": "Quarry Hill Parade",
       "atcoCode": "2400A005870A",
       "naptanCode": "kntajajt",
-      "lat": 51.190172,
-      "long": 0.2699533
+      "lat": "51.1901720",
+      "long": "0.2699533"
     },
     {
+      "directionIndex": 3,
       "name": "Lavender Hill",
       "atcoCode": "2400A013290A",
       "naptanCode": "kntapatw",
-      "lat": 51.1860769,
-      "long": 0.2756623
+      "lat": "51.1860769",
+      "long": "0.2756623"
     },
     {
+      "directionIndex": 4,
       "name": "Goldsmid Road",
       "atcoCode": "2400A013300A",
       "naptanCode": "kntapawa",
-      "lat": 51.1850363,
-      "long": 0.2783014
+      "lat": "51.1850363",
+      "long": "0.2783014"
     },
     {
+      "directionIndex": 5,
       "name": "Vauxhall Inn",
       "atcoCode": "240094967",
       "naptanCode": "kntgjtda",
-      "lat": 51.1831254,
-      "long": 0.2808258
+      "lat": "51.1831254",
+      "long": "0.2808258"
     },
     {
+      "directionIndex": 6,
       "name": "Hartlake Road",
       "atcoCode": "2400A013170A",
       "naptanCode": "kntapatj",
-      "lat": 51.1858224,
-      "long": 0.3174792
+      "lat": "51.1858224",
+      "long": "0.3174792"
     },
     {
+      "directionIndex": 7,
       "name": "Turmeric Gold",
       "atcoCode": "2400A013160A",
       "naptanCode": "kntapatg",
-      "lat": 51.1814277,
-      "long": 0.3195911
+      "lat": "51.1814277",
+      "long": "0.3195911"
     },
     {
+      "directionIndex": 8,
       "name": "Capel Primary School",
       "atcoCode": "2400102930",
       "naptanCode": "kntjawad",
-      "lat": 51.181718,
-      "long": 0.344836
+      "lat": "51.181718",
+      "long": "0.344836"
     },
     {
+      "directionIndex": 9,
       "name": "Sychem Lane",
       "atcoCode": "2400105344",
       "naptanCode": "kntjtadt",
-      "lat": 51.182219,
-      "long": 0.348455
+      "lat": "51.182219",
+      "long": "0.348455"
     },
     {
+      "directionIndex": 10,
       "name": "Ellis Close",
       "atcoCode": "2400A013140A",
       "naptanCode": "kntapata",
-      "lat": 51.1832746,
-      "long": 0.3536409
+      "lat": "51.1832746",
+      "long": "0.3536409"
     },
-
     {
+      "directionIndex": 11,
       "name": "Post Office",
       "atcoCode": "2400A013130A",
       "naptanCode": "kntapapw",
-      "lat": 51.1835789,
-      "long": 0.3577347
+      "lat": "51.1835789",
+      "long": "0.3577347"
     },
     {
+      "directionIndex": 12,
       "name": "Foal Hurst Wood",
       "atcoCode": "2400A013010A",
       "naptanCode": "kntapamd",
-      "lat": 51.174772,
-      "long": 0.377919
+      "lat": "51.174772",
+      "long": "0.377919"
     },
     {
-      "name": "Mascalls Academy Grounds",
-      "atcoCode": "2400A037820A",
-      "naptanCode": "kntdpdaw",
-      "lat": 51.169482,
-      "long": 0.3867425
-    },
-    {
+      "directionIndex": 13,
       "name": "Mascalls Corner",
       "atcoCode": "2400A013030A",
       "naptanCode": "kntapamj",
-      "lat": 51.1726337,
-      "long": 0.3847879
+      "lat": "51.1726337",
+      "long": "0.3847879"
     },
     {
+      "directionIndex": 14,
       "name": "Police Station",
       "atcoCode": "2400A013040A",
       "naptanCode": "kntapamp",
-      "lat": 51.17576,
-      "long": 0.384401
+      "lat": "51.17576",
+      "long": "0.384401"
     },
     {
+      "directionIndex": 15,
       "name": "Commercial Road",
       "atcoCode": "2400A013060A",
       "naptanCode": "kntapamw",
-      "lat": 51.178868,
-      "long": 0.3860254
+      "lat": "51.1788680",
+      "long": "0.3860254"
     },
     {
+      "directionIndex": 16,
       "name": "Waitrose",
       "atcoCode": "2400A013100A",
       "naptanCode": "kntapapj",
-      "lat": 51.1815197,
-      "long": 0.388738
+      "lat": "51.1815197",
+      "long": "0.3887380"
     }
   ],
   "outbound": [
     {
+      "directionIndex": 0,
       "name": "Waitrose",
       "atcoCode": "2400A013100A",
       "naptanCode": "kntapapj",
-      "lat": 51.1815197,
-      "long": 0.388738
+      "lat": "51.1815197",
+      "long": "0.3887380"
     },
     {
-      "name": "Mascalls Academy Grounds",
-      "atcoCode": "2400A037820A",
-      "naptanCode": "kntdpdaw",
-      "lat": 51.169482,
-      "long": 0.3867425
-    },
-    {
+      "directionIndex": 1,
       "name": "Whites Corner",
       "atcoCode": "2400A013110A",
       "naptanCode": "kntapapm",
-      "lat": 51.1791666,
-      "long": 0.3854971
+      "lat": "51.1791666",
+      "long": "0.3854971"
     },
     {
+      "directionIndex": 2,
       "name": "Police Station",
       "atcoCode": "2400A013050A",
       "naptanCode": "kntapamt",
-      "lat": 51.1757675,
-      "long": 0.3845919
+      "lat": "51.1757675",
+      "long": "0.3845919"
     },
-
     {
+      "directionIndex": 3,
       "name": "Mascalls Corner",
       "atcoCode": "240097610",
       "naptanCode": "kntgpmad",
-      "lat": 51.1725383,
-      "long": 0.3850548
+      "lat": "51.1725383",
+      "long": "0.3850548"
     },
     {
+      "directionIndex": 4,
       "name": "Foal Hurst Wood",
       "atcoCode": "2400A013020A",
       "naptanCode": "kntapamg",
-      "lat": 51.174891,
-      "long": 0.377183
+      "lat": "51.174891",
+      "long": "0.377183"
     },
     {
+      "directionIndex": 5,
       "name": "Post Office",
       "atcoCode": "2400A013130A",
       "naptanCode": "kntapapw",
-      "lat": 51.1835789,
-      "long": 0.3577347
+      "lat": "51.1835789",
+      "long": "0.3577347"
     },
     {
+      "directionIndex": 6,
       "name": "Ellis Close",
       "atcoCode": "2400105510",
       "naptanCode": "kntjtawt",
-      "lat": 51.1828438,
-      "long": 0.3527031
+      "lat": "51.1828438",
+      "long": "0.3527031"
     },
     {
+      "directionIndex": 7,
       "name": "Sychem Lane",
       "atcoCode": "2400105346",
       "naptanCode": "kntjtadw",
-      "lat": 51.1821412,
-      "long": 0.3487323
+      "lat": "51.1821412",
+      "long": "0.3487323"
     },
     {
+      "directionIndex": 8,
       "name": "Capel Primary School",
       "atcoCode": "2400A013150A",
       "naptanCode": "kntapatd",
-      "lat": 51.181569,
-      "long": 0.34457
+      "lat": "51.181569",
+      "long": "0.34457"
     },
     {
+      "directionIndex": 9,
       "name": "Turmeric Gold",
       "atcoCode": "2400102934",
       "naptanCode": "kntjawaj",
-      "lat": 51.1815333,
-      "long": 0.319253
+      "lat": "51.1815333",
+      "long": "0.3192530"
     },
     {
+      "directionIndex": 10,
       "name": "All Saints&#39; Church",
       "atcoCode": "2400102932",
       "naptanCode": "kntjawag",
-      "lat": 51.1847864,
-      "long": 0.3171124
+      "lat": "51.1847864",
+      "long": "0.3171124"
     },
     {
+      "directionIndex": 11,
       "name": "Vauxhall Inn",
       "atcoCode": "240094597",
       "naptanCode": "kntgjmtw",
-      "lat": 51.1832424,
-      "long": 0.2803593
+      "lat": "51.1832424",
+      "long": "0.2803593"
     },
     {
+      "directionIndex": 12,
       "name": "Goldsmid Road",
       "atcoCode": "240094599",
       "naptanCode": "kntgjmwa",
-      "lat": 51.1850817,
-      "long": 0.277817
+      "lat": "51.1850817",
+      "long": "0.2778170"
     },
     {
+      "directionIndex": 13,
       "name": "Lavender Hill",
       "atcoCode": "240094601",
       "naptanCode": "kntgjmwd",
-      "lat": 51.187047,
-      "long": 0.2738783
+      "lat": "51.1870470",
+      "long": "0.2738783"
     },
     {
-      "name": "Quarry Hill Parade",
-      "atcoCode": "2400A005870A",
-      "naptanCode": "kntajajt",
-      "lat": 51.190172,
-      "long": 0.2699533
-    },
-    {
+      "directionIndex": 14,
       "name": "Quarry Hill Parade",
       "atcoCode": "2400A060980R",
       "naptanCode": "kntgdadm",
-      "lat": 51.1907507,
-      "long": 0.2702537
+      "lat": "51.1907507",
+      "long": "0.2702537"
     },
     {
+      "directionIndex": 15,
       "name": "High Street",
       "atcoCode": "2400A005860A",
       "naptanCode": "kntajajp",
-      "lat": 51.1932215,
-      "long": 0.2726938
+      "lat": "51.1932215",
+      "long": "0.2726938"
     },
     {
+      "directionIndex": 16,
       "name": "Castle",
       "atcoCode": "2400A005990A",
       "naptanCode": "kntajapj",
-      "lat": 51.1961061,
-      "long": 0.2751259
+      "lat": "51.1961061",
+      "long": "0.2751259"
     }
   ]
 }

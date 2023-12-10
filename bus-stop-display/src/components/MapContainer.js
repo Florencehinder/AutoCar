@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Bus } from "phosphor-react";
 import L from "leaflet";
 import { renderToStaticMarkup } from "react-dom/server";
-import { lineData205 } from "../data/custom/205-line-route";
 import {
   MapContainer,
   TileLayer,
@@ -29,7 +28,12 @@ const HandleMapClick = ({ setCoordinates }) => {
   return null; // Component does not render anything
 };
 
-const CustomMapContainer = ({ busStops, geolocation, onMapClick }) => {
+const CustomMapContainer = ({
+  busStops,
+  geolocation,
+  onMapClick,
+  lineCoordinates,
+}) => {
   const watchIdRef = useRef(null);
   const MAX_READINGS = 10;
   const readingsQueueRef = useRef([]);
@@ -97,7 +101,7 @@ const CustomMapContainer = ({ busStops, geolocation, onMapClick }) => {
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <HandleMapClick setCoordinates={onMapClick} />
       <Marker position={[geolocation.lat, geolocation.long]} icon={busIcon} />
-      <Polyline pathOptions={{ color: "blue" }} positions={lineData205} />
+      <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} />
       {busStops.map((stop, index) => (
         <Marker
           key={index}

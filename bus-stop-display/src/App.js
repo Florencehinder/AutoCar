@@ -3,9 +3,10 @@ import RouteHeader from "./components/RouteHeader"; // Adjust the path as necess
 import CurrentStop from "./components/CurrentStop"; // Adjust the path as necessary
 import MapContainer from "./components/MapContainer";
 import TwoOhFive from "./data/routes/205.json";
-import BusStops from "./data/custom/205.json";
+import BusStops from "./data/custom/205_stop_point_refs.json";
 import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.ts";
+import { lineCoordinates } from "./data/custom/205_line_coordinates";
 
 function App() {
   const line = TwoOhFive.TransXChange.Services.Service.Lines.Line;
@@ -18,7 +19,7 @@ function App() {
   });
   const currentStop = stops[0];
   const nextStop = stops[2];
-  console.log(nextStop);
+
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
 
@@ -76,6 +77,9 @@ function App() {
             busStops={stops}
             geolocation={geolocation}
             onMapClick={handleGeolocation}
+            lineCoordinates={
+              reverse ? lineCoordinates.inbound : lineCoordinates.outbound
+            }
           />
         ) : (
           <CurrentStop stopName={currentStop.name} />
