@@ -7,6 +7,7 @@ import BusStops from "./data/custom/205_stop_point_refs.json";
 import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.ts";
 import { lineCoordinates } from "./data/custom/205_line_coordinates";
+// import useAudioAlert from "./hooks/useAudioAlert.ts";
 
 function App() {
   const line = TwoOhFive.TransXChange.Services.Service.Lines.Line;
@@ -19,28 +20,48 @@ function App() {
   });
   const currentStop = stops[0];
   const nextStop = stops[2];
-
+  console.log(nextStop);
+  console.log(nextStop.atcoCode);
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
+  const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    // Calculate the distance
+    console.log("useEffect for setting audio is running");
+    console.log("nextStop:", nextStop);
+
+    if (nextStop && nextStop.atcoCode) {
+      const audioPath = `./audio/${nextStop.atcoCode}.mp3`;
+      console.log("audioPath:", audioPath);
+
+      const newAudio = new Audio(audioPath);
+      setAudio(newAudio);
+
+      return () => {
+        if (newAudio) {
+          newAudio.pause();
+          newAudio.currentTime = 0;
+        }
+      };
+    }
+  }, [nextStop]);
+
+  useEffect(() => {
     const distance = getHaversineDistance(
       geolocation.lat,
       geolocation.long,
       nextStop.lat,
       nextStop.long
     );
-
-    // Update the distance state
     setDistanceToNextStop(distance);
-  }, [
-    currentStop.lat,
-    currentStop.long,
-    geolocation,
-    nextStop.lat,
-    nextStop.long,
-  ]); // Recalculate if the geolocation changes
+
+    if (distance <= 150 && audio) {
+      audio.play().catch((e) => {
+        console.error("Error playing audio:", e);
+        // Optionally, show an error message to the user
+      });
+    }
+  }, [geolocation, nextStop, audio]);
 
   const handleGeolocation = useCallback(
     (lat, long) => setGeolocation({ lat, long }),
@@ -48,12 +69,9 @@ function App() {
   );
 
   //// Things to still add:
-  // Link R_3 to Castle - Waitrose
-  // Link R_11 Waistrose - Castle
   // Add a "start button"
-  // Plot the line between two stops for the route
-  // Calculate the difference between the last latitude of the route segment and the first stop  of the next segment then switch to the next route segment. 
-  // Play Audio when within 150 ms
+  // Calculate the "next stop"
+  // Calculate the difference between the last latitude of the route segment and the first stop  of the next segment then switch to the next route segment.
 
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
@@ -70,7 +88,6 @@ function App() {
       <div>
         <p>Distance to next stop: {distanceToNextStop.toFixed(2)} meters</p>
       </div>
-
       <div className="h-full w-full relative">
         {showMap ? (
           <MapContainer
