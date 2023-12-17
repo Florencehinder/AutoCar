@@ -49,7 +49,6 @@ const CustomMapContainer = ({
           const { latitude, longitude, accuracy } = position.coords;
 
           if (!isNaN(latitude) && !isNaN(longitude)) {
-            console.log("CALLED");
             const newReading = { latitude, longitude, accuracy };
             readingsQueueRef.current.push(newReading);
 

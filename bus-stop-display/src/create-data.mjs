@@ -114,6 +114,22 @@ export function getOrderedStopPointRefs(routeDescription) {
   return orderedStopPointRefs;
 }
 
+// function writeDataToFile(filename, data) {
+//   const filePath = path.join(__dirname, filename);
+
+//   // Convert the data to a string if it's not already
+//   const dataString =
+//     typeof data === "string" ? data : JSON.stringify(data, null, 2);
+
+//   fs.writeFile(filePath, dataString, { flag: "a+" }, (err) => {
+//     if (err) {
+//       console.error("Error writing to file:", err);
+//       return;
+//     }
+//     console.log(`Data written to ${filename}`);
+//   });
+// }
+
 // get line coordinates of full route
 // routeDescription is the description of the route e.g. Post Office - Waitrose
 // we can use typescript in the future here for autocompletion
