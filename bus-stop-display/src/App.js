@@ -69,10 +69,12 @@ function App() {
   );
 
   //// Things to still add:
-  // Add a "start button"
-  // Calculate the "next stop"
-  // Calculate the difference between the last latitude of the route segment and the first stop  of the next segment then switch to the next route segment.
-
+  // Set "current stop" on the list == stop[0]
+  // Calculate the "next stop" as "current stop" +1
+  // Calculate the distance between geolocation and "nextStop" once it changes from closer to further away, "nextStop" becomes "currentStop"
+  // Calculate how far you are from the current stop and if you pass the current stop (geolocation)
+  // Turn off GPS location and on "cick and track"
+  
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
       {/* RouteHeader sits above and is not vertically centered */}
