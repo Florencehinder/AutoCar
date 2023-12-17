@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useEffect } from "react";
 import RouteHeader from "./components/RouteHeader"; // Adjust the path as necessary
-import CurrentStop from "./components/CurrentStop"; // Adjust the path as necessary
+import NextStop from "./components/NextStop"; // Adjust the path as necessary
 import MapContainer from "./components/MapContainer";
 import TwoOhFive from "./data/routes/205.json";
 import BusStops from "./data/custom/205_stop_point_refs.json";
@@ -74,7 +74,7 @@ function App() {
   // Calculate the distance between geolocation and "nextStop" once it changes from closer to further away, "nextStop" becomes "currentStop"
   // Calculate how far you are from the current stop and if you pass the current stop (geolocation)
   // Turn off GPS location and on "cick and track"
-  
+
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
       {/* RouteHeader sits above and is not vertically centered */}
@@ -88,6 +88,8 @@ function App() {
         reverse={reverse}
       />
       <div>
+        <p>Distance past current stop: {distanceToNextStop.toFixed(2)} meters</p>
+        {/* placeholder needs to be updated to actual current stop value */}
         <p>Distance to next stop: {distanceToNextStop.toFixed(2)} meters</p>
       </div>
       <div className="h-full w-full relative">
@@ -101,7 +103,7 @@ function App() {
             }
           />
         ) : (
-          <CurrentStop stopName={currentStop.name} />
+          <NextStop stopName={currentStop.name} />
         )}
       </div>
     </div>
