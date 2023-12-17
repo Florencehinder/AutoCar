@@ -68,12 +68,10 @@ function App() {
     []
   );
 
-  //// Things to still add:
-  // Set "current stop" on the list == stop[0]
-  // Calculate the "next stop" as "current stop" +1
-  // Calculate the distance between geolocation and "nextStop" once it changes from closer to further away, "nextStop" becomes "currentStop"
-  // Calculate how far you are from the current stop and if you pass the current stop (geolocation)
-  // Turn off GPS location and on "cick and track"
+  //// Things to add:
+  // Button for GPS or  "cick and track" (Jonathan)
+  // Calculate the velocity to change the next stop (Jonathan)
+  // Play audio once when 150 m's away (Flo)
 
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
