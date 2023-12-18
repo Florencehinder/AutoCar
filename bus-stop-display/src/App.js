@@ -1,28 +1,36 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import RouteHeader from "./components/RouteHeader"; // Adjust the path as necessary
-import NextStop from "./components/NextStop"; // Adjust the path as nec essary
 import MapContainer from "./components/MapContainer";
 import FourSixtySix from "./data/routes/466.json";
 import { stopPointRefs as BusStops } from "./data/custom/466/stop_point_refs";
 import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
+import { useLocationAndVelocity } from "./hooks";
 // import useAudioAlert from "./hooks/useAudioAlert.ts";
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
 const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
 
 function App() {
-  const [showMap, setShowMap] = useState(false);
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
-  const [geolocation, setGeolocation] = useState({
-    lat: 51.18153,
-    long: 0.38451,
-  });
+  const { latitude, longitude, velocity } = useLocationAndVelocity();
   const currentStop = stops[0];
   const nextStop = stops[2];
-  console.log(stops);
+  const [clickOrGps, setClickOrGps] = useState("Use GPS");
+  const [clickCoordinates, setClickCoordinates] = useState({
+    latitude: currentStop.lat,
+    longitude: currentStop.long,
+  });
+  const geoLocation = {
+    latitude: clickOrGps === "Use GPS" ? latitude : clickCoordinates.latitude,
+    longitude:
+      clickOrGps === "Use GPS" ? longitude : clickCoordinates.longitude,
+  };
+  console.log(latitude);
+  console.log({ geoLocation });
+
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
   const [audio, setAudio] = useState(null);
@@ -45,8 +53,8 @@ function App() {
 
   useEffect(() => {
     const distance = getHaversineDistance(
-      geolocation.lat,
-      geolocation.long,
+      geoLocation.latitude,
+      geoLocation.longitude,
       nextStop.lat,
       nextStop.long
     );
@@ -58,14 +66,8 @@ function App() {
         // Optionally, show an error message to the user
       });
     }
-  }, [geolocation, nextStop, audio]);
+  }, [geoLocation.latitude, geoLocation.longitude, nextStop, audio]);
 
-  const handleGeolocation = useCallback(
-    (lat, long) => setGeolocation({ lat, long }),
-    []
-  );
-
-  //// Things to add:
   // Button for GPS or  "cick and track" (Jonathan)
   // Calculate the velocity to change the next stop (Jonathan)
   // Play audio once when 150 m's away (Flo)
@@ -74,41 +76,44 @@ function App() {
     <div className="App flex flex-col min-h-screen bg-white w-full">
       {/* RouteHeader sits above and is not vertically centered */}
       <RouteHeader
-        showMap={showMap}
         onReverse={() => setReverse((prevState) => !prevState)}
-        onShowMap={() => setShowMap((prevState) => !prevState)}
         route={lineName}
         origin={line.Origin}
         destination={line.Destination}
         reverse={reverse}
+        setClickOrGps={setClickOrGps}
+        clickOrGps={clickOrGps}
       />
-      {showMap && (
-        <div className="px-10 py-3 flex flex-col gap-1">
+
+      <div className="px-10 py-3 flex flex-col gap-1">
+        <p>
+          Current stop: <b>{currentStop.name}</b>
+        </p>
+        <p>
+          Next stop: <b>{nextStop.name}</b>
+        </p>
+        <p>
+          Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
+        </p>
+        {clickOrGps === "Use GPS" ? (
           <p>
-            Current stop: <b>{currentStop.name}</b>
+            Current velocity: <b>{velocity.toFixed(0)} m/s</b>
           </p>
-          <p>
-            Next stop: <b>{nextStop.name}</b>
-          </p>
-          <p>
-            Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
-          </p>
-        </div>
-      )}
+        ) : null}
+      </div>
 
       <div className="h-full w-full relative">
-        {showMap ? (
-          <MapContainer
-            busStops={stops}
-            geolocation={geolocation}
-            onMapClick={handleGeolocation}
-            lineCoordinates={
-              reverse ? lineCoordinates.inbound : lineCoordinates.outbound
-            }
-          />
-        ) : (
-          <NextStop stopName={currentStop.name} />
-        )}
+        <MapContainer
+          clickOrGps={clickOrGps}
+          onLocationUpdate={(lat, long) =>
+            setClickCoordinates({ latitude: lat, longitude: long })
+          }
+          busStops={stops}
+          lineCoordinates={
+            reverse ? lineCoordinates.inbound : lineCoordinates.outbound
+          }
+          geolocation={geoLocation}
+        />
       </div>
     </div>
   );
