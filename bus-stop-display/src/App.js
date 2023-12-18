@@ -15,7 +15,7 @@ const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
 function App() {
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
-  const { latitude, longitude, velocity } = useLocationAndVelocity();
+  const { latitude, longitude, relativeVelocity } = useLocationAndVelocity();
   const currentStop = stops[34];
   const nextStop = stops[36];
   const [clickOrGps, setClickOrGps] = useState("Use GPS");
@@ -97,7 +97,7 @@ function App() {
         </p>
         {clickOrGps === "Use GPS" ? (
           <p>
-            Current velocity: <b>{velocity.toFixed(0)} m/s</b>
+            Current relative velocity: <b>{relativeVelocity.toFixed(0)} m/s</b>
           </p>
         ) : null}
       </div>
