@@ -82,12 +82,20 @@ function App() {
         destination={line.Destination}
         reverse={reverse}
       />
-      <div className="px-10 py-5">
-        {/* placeholder needs to be updated to actual current stop value */}
-        <p>
-          Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
-        </p>
-      </div>
+      {showMap && (
+        <div className="px-10 py-3 flex flex-col gap-1">
+          <p>
+            Current stop: <b>{currentStop.name}</b>
+          </p>
+          <p>
+            Next stop: <b>{nextStop.name}</b>
+          </p>
+          <p>
+            Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
+          </p>
+        </div>
+      )}
+
       <div className="h-full w-full relative">
         {showMap ? (
           <MapContainer
