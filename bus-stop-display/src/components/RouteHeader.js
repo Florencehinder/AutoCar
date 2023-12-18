@@ -24,7 +24,6 @@ const RouteHeader = ({
           <Swap />
         </button>
       </div>
-
       <div>
         <SelectMenu
           options={["Use GPS", "Use Map Click"]}

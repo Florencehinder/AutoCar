@@ -102,7 +102,7 @@ function App() {
         ) : null}
       </div>
 
-      <div className="h-full w-full relative">
+      <div className="h-full w-full relative none">
         <MapContainer
           clickOrGps={clickOrGps}
           onLocationUpdate={(lat, long) =>

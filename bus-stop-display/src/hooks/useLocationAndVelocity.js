@@ -46,6 +46,8 @@ export function useLocationAndVelocity() {
 
             let velocity = 0;
             const previousLocation = previousLocationRef.current;
+            console.log({ previousLocation });
+            console.log({ newReading });
             if (previousLocation) {
               const timeElapsed =
                 (currentTime - previousLocation.timestamp) / 1000; // Convert to seconds
@@ -55,6 +57,8 @@ export function useLocationAndVelocity() {
                 newReading.latitude,
                 newReading.longitude
               );
+
+              console.log(distance);
               velocity = timeElapsed > 0 ? distance / timeElapsed : 0; // m/s
             }
             setLocationData({ ...averageLocation, velocity });
