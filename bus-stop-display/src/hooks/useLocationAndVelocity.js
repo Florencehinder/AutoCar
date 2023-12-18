@@ -41,6 +41,11 @@ export function useLocationAndVelocity(currentStopLat, currentStopLong) {
               // Add to velocities array
               relativeVelocitiesRef.current.push(relativeVelocity);
 
+              if (relativeVelocitiesRef.current.length > 10) {
+                // Remove the oldest velocity value
+                relativeVelocitiesRef.current.shift();
+              }
+
               // Calculate average relative velocity
               const sumVelocities = relativeVelocitiesRef.current.reduce(
                 (acc, vel) => acc + vel,
