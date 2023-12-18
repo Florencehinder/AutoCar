@@ -16,8 +16,8 @@ function App() {
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const { latitude, longitude, velocity } = useLocationAndVelocity();
-  const currentStop = stops[0];
-  const nextStop = stops[2];
+  const currentStop = stops[34];
+  const nextStop = stops[36];
   const [clickOrGps, setClickOrGps] = useState("Use GPS");
   const [clickCoordinates, setClickCoordinates] = useState({
     latitude: currentStop.lat,
