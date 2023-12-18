@@ -5,10 +5,11 @@ export function useLocationAndVelocity(currentStopLat, currentStopLong) {
   const [locationData, setLocationData] = useState({
     latitude: 0,
     longitude: 0,
-    relativeVelocity: 0,
+    averageRelativeVelocity: 0,
   });
   const watchIdRef = useRef(null);
-  const previousTimestampRef = useRef(null);
+  const relativeVelocitiesRef = useRef([]); // Store relative velocities
+  const previousLocationRef = useRef(null);
 
   useEffect(() => {
     if (navigator.geolocation) {
@@ -18,22 +19,40 @@ export function useLocationAndVelocity(currentStopLat, currentStopLong) {
           const currentTime = position.timestamp;
 
           if (!isNaN(latitude) && !isNaN(longitude)) {
-            const distance = getHaversineDistance(
-              currentStopLat,
-              currentStopLong,
+            const newReading = {
               latitude,
-              longitude
-            );
+              longitude,
+              timestamp: currentTime,
+            };
+            const previousLocation = previousLocationRef.current;
 
-            let relativeVelocity = 0;
-            const previousTimestamp = previousTimestampRef.current;
-            if (previousTimestamp) {
-              const timeElapsed = (currentTime - previousTimestamp) / 1000; // Convert to seconds
-              relativeVelocity = timeElapsed > 0 ? distance / timeElapsed : 0; // m/s
+            if (previousLocation) {
+              const timeElapsed =
+                (currentTime - previousLocation.timestamp) / 1000; // Convert to seconds
+              const distance = getHaversineDistance(
+                previousLocation.latitude,
+                previousLocation.longitude,
+                newReading.latitude,
+                newReading.longitude
+              );
+              const relativeVelocity =
+                timeElapsed > 0 ? distance / timeElapsed : 0; // m/s
+
+              // Add to velocities array
+              relativeVelocitiesRef.current.push(relativeVelocity);
+
+              // Calculate average relative velocity
+              const sumVelocities = relativeVelocitiesRef.current.reduce(
+                (acc, vel) => acc + vel,
+                0
+              );
+              const averageRelativeVelocity =
+                sumVelocities / relativeVelocitiesRef.current.length;
+
+              setLocationData({ latitude, longitude, averageRelativeVelocity });
             }
 
-            setLocationData({ latitude, longitude, relativeVelocity });
-            previousTimestampRef.current = currentTime;
+            previousLocationRef.current = newReading;
           } else {
             console.error("Invalid coordinates:", latitude, longitude);
           }
@@ -51,7 +70,7 @@ export function useLocationAndVelocity(currentStopLat, currentStopLong) {
         navigator.geolocation.clearWatch(watchIdRef.current);
       }
     };
-  }, [currentStopLat, currentStopLong]); // Add these as dependencies
+  }, []);
 
   return locationData;
 }

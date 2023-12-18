@@ -7,6 +7,8 @@ import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
 import { useLocationAndVelocity } from "./hooks";
+import calculateNextStop from "./utils/calculateNextStop";
+
 // import useAudioAlert from "./hooks/useAudioAlert.ts";
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
@@ -15,7 +17,8 @@ const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
 function App() {
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
-  const { latitude, longitude, relativeVelocity } = useLocationAndVelocity();
+  const { latitude, longitude, averageRelativeVelocity } =
+    useLocationAndVelocity(/* args */);
   const currentStop = stops[34];
   const nextStop = stops[36];
   const [clickOrGps, setClickOrGps] = useState("Use GPS");
@@ -68,7 +71,6 @@ function App() {
     }
   }, [geoLocation.latitude, geoLocation.longitude, nextStop, audio]);
 
-  // Button for GPS or  "cick and track" (Jonathan)
   // Calculate the velocity to change the next stop (Jonathan)
   // Play audio once when 150 m's away (Flo)
 
@@ -97,7 +99,8 @@ function App() {
         </p>
         {clickOrGps === "Use GPS" ? (
           <p>
-            Current relative velocity: <b>{relativeVelocity.toFixed(0)} m/s</b>
+            Current relative velocity:{" "}
+            <b>{averageRelativeVelocity.toFixed(0)} m/s</b>
           </p>
         ) : null}
       </div>
