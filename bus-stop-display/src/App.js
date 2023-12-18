@@ -7,7 +7,7 @@ import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
 import { useLocationAndVelocity } from "./hooks";
-import calculateNextStop from "./utils/calculateNextStop";
+// import calculateNextStop from "./utils/calculateNextStop";
 
 // import useAudioAlert from "./hooks/useAudioAlert.ts";
 
