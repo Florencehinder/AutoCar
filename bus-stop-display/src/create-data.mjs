@@ -4,12 +4,12 @@ import KentNaptanData from "./data/naptan/240.json" assert { type: "json" };
 // takes in the full route data, such as the 205.json file
 // and returns the coordinates of the stop point refs along the inbound and outbound routes;
 // the returned stop point refs are not correctly ordered
-export function getUnorderedStopPointRefs(route) {
+export function getUnorderedStopPointRefs(route, naptanData) {
   const data = [];
 
   for (const path of route.TransXChange.StopPoints.AnnotatedStopPointRef) {
     try {
-      const naptanData = KentNaptanData.NaPTAN.StopPoints.StopPoint.find(
+      const naptanData = napatanData.NaPTAN.StopPoints.StopPoint.find(
         (point) => {
           return point.AtcoCode == path?.StopPointRef;
         }
@@ -37,8 +37,8 @@ export function getUnorderedStopPointRefs(route) {
 }
 
 // gets all the route refs so you can see all possible journeys for a given route
-export function getRouteRefs() {
-  return TwoOhFiveRoute.TransXChange.Routes.Route.map((route, i) => ({
+export function getRouteRefs(route) {
+  return route.TransXChange.Routes.Route.map((route, i) => ({
     routeRef: `R_${i + 1}`,
     description: route.Description,
   }));
@@ -54,8 +54,8 @@ function extractInteger(str) {
 
 // routeDescription is the description of the route e.g. Post Office - Waitrose
 // we can use typescript in the future here for autocompletion
-export function getOrderedStopPointRefs(routeDescription) {
-  const routeSectionRefs = TwoOhFiveRoute.TransXChange.Routes.Route.find(
+export function getOrderedStopPointRefs(route, routeDescription, naptanData) {
+  const routeSectionRefs = route.TransXChange.Routes.Route.find(
     (r) => r.Description === routeDescription
   );
 
@@ -63,20 +63,20 @@ export function getOrderedStopPointRefs(routeDescription) {
     throw Error("That route does not exist in this TransXChange");
   }
 
-  const routeSections = TwoOhFiveRoute.TransXChange.RouteSections.RouteSection;
+  const routeSections = route.TransXChange.RouteSections.RouteSection;
   const orderedStopPointRefs = [];
 
   for (const [i, r] of routeSectionRefs.RouteSectionRef.entries()) {
     const routeIndex = extractInteger(r) - 1;
     const routeSection = routeSections[routeIndex];
-    const fromNaptanData = KentNaptanData.NaPTAN.StopPoints.StopPoint.find(
+    const fromNaptanData = naptanData.NaPTAN.StopPoints.StopPoint.find(
       (point) => {
         return point.AtcoCode == routeSection.RouteLink.From.StopPointRef;
       }
     );
 
     const fromCommonName =
-      TwoOhFiveRoute.TransXChange.StopPoints.AnnotatedStopPointRef.find(
+      route.TransXChange.StopPoints.AnnotatedStopPointRef.find(
         (ref) => ref.StopPointRef === routeSection.RouteLink.From.StopPointRef
       ).CommonName;
 
@@ -90,13 +90,13 @@ export function getOrderedStopPointRefs(routeDescription) {
     });
 
     if (i === routeSectionRefs.RouteSectionRef.length - 1) {
-      const toNaptanData = KentNaptanData.NaPTAN.StopPoints.StopPoint.find(
+      const toNaptanData = naptanData.NaPTAN.StopPoints.StopPoint.find(
         (point) => {
           return point.AtcoCode == routeSection.RouteLink.To.StopPointRef;
         }
       );
       const toCommonName =
-        TwoOhFiveRoute.TransXChange.StopPoints.AnnotatedStopPointRef.find(
+        route.TransXChange.StopPoints.AnnotatedStopPointRef.find(
           (ref) => ref.StopPointRef === routeSection.RouteLink.To.StopPointRef
         ).CommonName;
 
@@ -113,6 +113,12 @@ export function getOrderedStopPointRefs(routeDescription) {
 
   return orderedStopPointRefs;
 }
+
+console.log(
+  JSON.stringify(
+    getOrderedStopPointRefs(TwoOhFiveRoute, "Waitrose - Castle", KentNaptanData)
+  )
+);
 
 // function writeDataToFile(filename, data) {
 //   const filePath = path.join(__dirname, filename);
@@ -133,12 +139,12 @@ export function getOrderedStopPointRefs(routeDescription) {
 // get line coordinates of full route
 // routeDescription is the description of the route e.g. Post Office - Waitrose
 // we can use typescript in the future here for autocompletion
-export function getLineCoordinates(routeDescription) {
-  const routeSectionRefs = TwoOhFiveRoute.TransXChange.Routes.Route.find(
+export function getLineCoordinates(route, routeDescription) {
+  const routeSectionRefs = route.TransXChange.Routes.Route.find(
     (r) => r.Description === routeDescription
   );
 
-  const routeSections = TwoOhFiveRoute.TransXChange.RouteSections.RouteSection;
+  const routeSections = route.TransXChange.RouteSections.RouteSection;
   const lineCoordinates = [];
 
   for (const r of routeSectionRefs.RouteSectionRef) {
@@ -155,4 +161,4 @@ export function getLineCoordinates(routeDescription) {
   return lineCoordinates;
 }
 
-console.log(JSON.stringify(getLineCoordinates("Waitrose - Castle")));
+// console.log(JSON.stringify(getLineCoordinates("Waitrose - Castle")));

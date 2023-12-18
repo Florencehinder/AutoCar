@@ -1,16 +1,18 @@
 import React, { useCallback, useState, useEffect } from "react";
 import RouteHeader from "./components/RouteHeader"; // Adjust the path as necessary
-import NextStop from "./components/NextStop"; // Adjust the path as necessary
+import NextStop from "./components/NextStop"; // Adjust the path as nec essary
 import MapContainer from "./components/MapContainer";
-import TwoOhFive from "./data/routes/205.json";
-import BusStops from "./data/custom/205_stop_point_refs.json";
+import FourSixtySix from "./data/routes/466.json";
+import { stopPointRefs as BusStops } from "./data/custom/466/stop_point_refs";
 import "leaflet/dist/leaflet.css";
-import { getHaversineDistance } from "./utils/getHaversineDistance.ts";
-import { lineCoordinates } from "./data/custom/205_line_coordinates";
+import { getHaversineDistance } from "./utils/getHaversineDistance.js";
+import { lineCoordinates } from "./data/custom/205/line_coordinates";
 // import useAudioAlert from "./hooks/useAudioAlert.ts";
 
+const line = FourSixtySix.TransXChange.Services.Service.StandardService;
+const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
+
 function App() {
-  const line = TwoOhFive.TransXChange.Services.Service.Lines.Line;
   const [showMap, setShowMap] = useState(false);
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.inbound : BusStops.outbound;
@@ -20,8 +22,7 @@ function App() {
   });
   const currentStop = stops[0];
   const nextStop = stops[2];
-  console.log(nextStop);
-  console.log(nextStop.atcoCode);
+
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
   const [audio, setAudio] = useState(null);
@@ -80,13 +81,15 @@ function App() {
         showMap={showMap}
         onReverse={() => setReverse((prevState) => !prevState)}
         onShowMap={() => setShowMap((prevState) => !prevState)}
-        route={line.LineName}
-        origin={line.OutboundDescription.Origin}
-        destination={line.OutboundDescription.Destination}
+        route={lineName}
+        origin={line.Origin}
+        destination={line.Destination}
         reverse={reverse}
       />
-      <div>
-        <p>Distance past current stop: {distanceToNextStop.toFixed(2)} meters</p>
+      <div className="px-10 py-5">
+        <p>
+          Distance past current stop: {distanceToNextStop.toFixed(2)} meters
+        </p>
         {/* placeholder needs to be updated to actual current stop value */}
         <p>Distance to next stop: {distanceToNextStop.toFixed(2)} meters</p>
       </div>

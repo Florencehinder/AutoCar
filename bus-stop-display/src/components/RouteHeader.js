@@ -14,7 +14,7 @@ const RouteHeader = ({
   const _origin = reverse ? destination : origin;
 
   return (
-    <div className="flex w-full bg-blue-500 text-white p-10 text-6xl justify-between flex-wrap gap-10">
+    <div className="flex w-full bg-blue-500 text-white p-10 text-4xl justify-between flex-wrap gap-10">
       <p>
         {route} from {_origin} to {_destination}
       </p>

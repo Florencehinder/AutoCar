@@ -100,7 +100,7 @@ const CustomMapContainer = ({
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       <HandleMapClick setCoordinates={onMapClick} />
       <Marker position={[geolocation.lat, geolocation.long]} icon={busIcon} />
-      <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} />
+      {/* <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} /> */}
       {busStops.map((stop, index) => (
         <Marker
           key={index}
