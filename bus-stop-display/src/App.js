@@ -15,25 +15,21 @@ const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
 function App() {
   const [showMap, setShowMap] = useState(false);
   const [reverse, setReverse] = useState(false);
-  const stops = reverse ? BusStops.inbound : BusStops.outbound;
+  const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const [geolocation, setGeolocation] = useState({
     lat: 51.18153,
     long: 0.38451,
   });
   const currentStop = stops[0];
   const nextStop = stops[2];
-
+  console.log(stops);
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
   const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    console.log("useEffect for setting audio is running");
-    console.log("nextStop:", nextStop);
-
     if (nextStop && nextStop.atcoCode) {
       const audioPath = `./audio/${nextStop.atcoCode}.mp3`;
-      console.log("audioPath:", audioPath);
 
       const newAudio = new Audio(audioPath);
       setAudio(newAudio);
@@ -87,11 +83,10 @@ function App() {
         reverse={reverse}
       />
       <div className="px-10 py-5">
-        <p>
-          Distance past current stop: {distanceToNextStop.toFixed(2)} meters
-        </p>
         {/* placeholder needs to be updated to actual current stop value */}
-        <p>Distance to next stop: {distanceToNextStop.toFixed(2)} meters</p>
+        <p>
+          Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
+        </p>
       </div>
       <div className="h-full w-full relative">
         {showMap ? (
