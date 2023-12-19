@@ -16,8 +16,9 @@ function calculateNextStop(distanceHistory, stops, currentStopIndex) {
   if (latestDistance > previousDistance && latestDistance < 100) {
     // Move to the next stop if there is one
     return currentStopIndex < stops.length - 1
-      ? currentStopIndex + 1
-      : currentStopIndex;
+      ? currentStopIndex + 2
+      : // super weird but for some reason we have to add two to the stop index for it to work? I don't really understand why.
+        currentStopIndex;
   }
 
   // No change in stop
