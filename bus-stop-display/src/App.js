@@ -7,6 +7,7 @@ import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
 import { useLocationAndVelocity } from "./hooks";
+import calculateNextStop from "./utils/calculateNextStop";
 // import useAudioAlert from "./hooks/useAudioAlert.ts";
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
@@ -16,8 +17,11 @@ function App() {
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const { latitude, longitude, velocity } = useLocationAndVelocity();
-  const currentStop = stops[34];
-  const nextStop = stops[36];
+  const [distanceHistory, setDistanceHistory] = useState([]);
+  const [currentStopIndex, setCurrentStopIndex] = useState(34); // Assuming start at index 34
+  const currentStop = stops[currentStopIndex];
+  const nextStop =
+    currentStopIndex < stops.length - 1 ? stops[currentStopIndex + 1] : null;
   const [clickOrGps, setClickOrGps] = useState("Use GPS");
   const [clickCoordinates, setClickCoordinates] = useState({
     latitude: currentStop.lat,
@@ -60,17 +64,39 @@ function App() {
     );
     setDistanceToNextStop(distance);
 
+    // Update distance history
+    setDistanceHistory((prevHistory) => [...prevHistory, distance]);
+
+    // Determine if it's time to move to the next stop
+    const newCurrentStopIndex = calculateNextStop(
+      distanceHistory,
+      stops,
+      currentStopIndex
+    );
+    if (newCurrentStopIndex !== currentStopIndex) {
+      setCurrentStopIndex(newCurrentStopIndex);
+    }
+
     if (distance <= 150 && audio) {
       audio.play().catch((e) => {
         console.error("Error playing audio:", e);
         // Optionally, show an error message to the user
       });
     }
-  }, [geoLocation.latitude, geoLocation.longitude, nextStop, audio]);
+  }, [
+    geoLocation.latitude,
+    geoLocation.longitude,
+    currentStopIndex, // make sure to include this in the dependency array
+    audio,
+    distanceHistory,
+    nextStop.lat, // Add this
+    nextStop.long, // And this
+    stops,
+  ]);
 
-  // Button for GPS or  "cick and track" (Jonathan)
-  // Calculate the velocity to change the next stop (Jonathan)
+  // change next stop
   // Play audio once when 150 m's away (Flo)
+  // center around current location (or map click ie. geolocation)
 
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
