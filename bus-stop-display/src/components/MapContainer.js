@@ -37,7 +37,6 @@ function ChangeView({ center, zoom }) {
 
 const CustomMapContainer = ({
   busStops,
-  geolocation,
   onLocationUpdate,
   clickOrGps,
   geoLocation,
@@ -83,7 +82,7 @@ const CustomMapContainer = ({
         <HandleMapClick setCoordinates={onLocationUpdate} />
       ) : null}
       <Marker
-        position={[geolocation.latitude, geolocation.longitude]}
+        position={[geoLocation.latitude, geoLocation.longitude]}
         icon={busIcon}
       />
       {/* <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} /> */}

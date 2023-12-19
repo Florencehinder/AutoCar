@@ -162,7 +162,6 @@ function App() {
           lineCoordinates={
             reverse ? lineCoordinates.inbound : lineCoordinates.outbound
           }
-          geolocation={geoLocation}
         />
       </div>
     </div>
