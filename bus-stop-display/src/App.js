@@ -21,7 +21,7 @@ function App() {
   const [currentStopIndex, setCurrentStopIndex] = useState(34); // Assuming start at index 34
   const currentStop = stops[currentStopIndex];
   const nextStop =
-    currentStopIndex < stops.length - 1 ? stops[currentStopIndex + 1] : null;
+    currentStopIndex < stops.length - 1 ? stops[currentStopIndex + 2] : null;
   const [clickOrGps, setClickOrGps] = useState("Use GPS");
   const [clickCoordinates, setClickCoordinates] = useState({
     latitude: currentStop.lat,
