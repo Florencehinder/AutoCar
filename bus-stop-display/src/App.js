@@ -78,11 +78,15 @@ function App() {
       return [...prevHistory, distance];
     });
 
-    if (distance <= 150 && audio) {
+    if (
+      distance <= 150 &&
+      audio &&
+      !playedStops.current.has(currentStopIndex)
+    ) {
       audio.play().catch((e) => {
         console.error("Error playing audio:", e);
-        // Optionally, show an error message to the user
       });
+      playedStops.current.add(currentStopIndex);
     }
   }, [
     geoLocation.latitude,
@@ -104,7 +108,7 @@ function App() {
 
     if (newCurrentStopIndex !== currentStopIndex) {
       setCurrentStopIndex(newCurrentStopIndex);
-      playedStops.current.clear(); // Reset played stops for the new stop
+      // playedStops.current.clear(); // Reset played stops for the new stop
     }
   }, [currentStopIndex, distanceHistory, stops]);
 
