@@ -73,11 +73,11 @@ const CustomMapContainer = ({
   return (
     <MapContainer
       center={center}
-      zoom={12}
+      zoom={14}
       style={{ height: "100vh", width: "100vw" }}
       whenCreated={setMap}
     >
-      <ChangeView center={center} zoom={12} />
+      <ChangeView center={center} zoom={14} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {clickOrGps === "Use Map Click" ? (
         <HandleMapClick setCoordinates={onLocationUpdate} />
