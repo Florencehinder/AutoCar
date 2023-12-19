@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import RouteHeader from "./components/RouteHeader"; // Adjust the path as necessary
 import MapContainer from "./components/MapContainer";
 import FourSixtySix from "./data/routes/466.json";
@@ -32,25 +32,29 @@ function App() {
     longitude:
       clickOrGps === "Use GPS" ? longitude : clickCoordinates.longitude,
   };
-  console.log(latitude);
-  console.log({ geoLocation });
 
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
   const [audio, setAudio] = useState(null);
+  const playedStops = useRef(new Set());
 
   useEffect(() => {
     if (nextStop && nextStop.atcoCode) {
-      const audioPath = `./audio/${nextStop.atcoCode}.mp3`;
+      const audioPath = `./audio/466/${nextStop.atcoCode}.mp3`;
+      console.log(`Loading audio from: ${audioPath}`); // Debugging
 
       const newAudio = new Audio(audioPath);
       setAudio(newAudio);
 
+      // Test audio playback directly
+      newAudio.play().catch((e) => {
+        console.error("Error directly playing audio:", e);
+      });
+
+      // Cleanup function
       return () => {
-        if (newAudio) {
-          newAudio.pause();
-          newAudio.currentTime = 0;
-        }
+        newAudio.pause();
+        newAudio.currentTime = 0;
       };
     }
   }, [nextStop]);
@@ -62,40 +66,55 @@ function App() {
       nextStop.lat,
       nextStop.long
     );
-    setDistanceToNextStop(distance);
+    if (Math.abs(distance - distanceToNextStop) > 1) {
+      // Adding a threshold to avoid minor changes
+      setDistanceToNextStop(distance);
+    }
 
-    // Update distance history
-    setDistanceHistory((prevHistory) => [...prevHistory, distance]);
-
-    // Determine if it's time to move to the next stop
+    if (!distanceHistory.includes(distance)) {
+      setDistanceHistory((prevHistory) => [...prevHistory, distance]);
+    }
     const newCurrentStopIndex = calculateNextStop(
       distanceHistory,
       stops,
       currentStopIndex
     );
+
     if (newCurrentStopIndex !== currentStopIndex) {
       setCurrentStopIndex(newCurrentStopIndex);
+      playedStops.current.clear(); // Reset played stops for the new stop
     }
 
-    if (distance <= 150 && audio) {
+    if (
+      distance <= 150 &&
+      audio &&
+      !playedStops.current.has(currentStopIndex)
+    ) {
       audio.play().catch((e) => {
         console.error("Error playing audio:", e);
-        // Optionally, show an error message to the user
       });
+      playedStops.current.add(currentStopIndex);
     }
   }, [
     geoLocation.latitude,
     geoLocation.longitude,
-    currentStopIndex, // make sure to include this in the dependency array
+    currentStopIndex,
     audio,
     distanceHistory,
-    nextStop.lat, // Add this
-    nextStop.long, // And this
     stops,
+    nextStop,
   ]);
 
-  // change next stop
-  // Play audio once when 150 m's away (Flo)
+  const handleStartRoute = () => {
+    // ... other logic for starting the route
+
+    if (audio) {
+      audio.play().catch((e) => {
+        console.error("Error playing audio after user interaction:", e);
+      });
+    }
+  };
+
   // center around current location (or map click ie. geolocation)
 
   return (
@@ -112,6 +131,7 @@ function App() {
       />
 
       <div className="px-10 py-3 flex flex-col gap-1">
+        <button onClick={handleStartRoute}>Start Route</button>
         <p>
           Current stop: <b>{currentStop.name}</b>
         </p>

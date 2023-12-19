@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 
 # Where audio files will be saved
-folder_path = 'bus-stop-display/src/data/audio/'
+folder_path = 'bus-stop-display/public/audio/466/'
 
 # Load environment variables from .env.local file
 load_dotenv('bus-stop-display/.env.local')
@@ -39,14 +39,15 @@ def synthesize_and_save_tts(bus_stop_id, bus_stop_name):
 
 
 # Open the JSON file
-with open('bus-stop-display/src/data/custom/205.json', 'r') as file:
+with open('bus-stop-display/src/data/routes/466.json', 'r') as file:
     # Load the JSON data
     data = json.load(file)
 
-    # Iterate over the entries in the 'custom' list
-    for entry in data['custom']:
-        bus_stop_id = entry['atcoCode']
-        bus_stop_name = entry['name']
+    # Iterate over the entries in the 'AnnotatedStopPointRef' list
+    # change this code to use a dictionary to reference the StopPointRef and CommonName
+    for entry in data['TransXChange']['StopPoints']['AnnotatedStopPointRef']:
+        bus_stop_id = entry['StopPointRef']
+        bus_stop_name = entry['CommonName']
 
         # Call the function to synthesize text and save audio
         synthesize_and_save_tts(bus_stop_id, bus_stop_name)
