@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Bus } from "phosphor-react";
 import L from "leaflet";
+import "leaflet.offline";
 import { renderToStaticMarkup } from "react-dom/server";
-import { MapContainer, TileLayer, Marker, useMapEvents } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  useMapEvents,
+  useMap,
+} from "react-leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
 const busIconMarkup = renderToStaticMarkup(<Bus size={24} />);
@@ -22,18 +29,55 @@ const HandleMapClick = ({ setCoordinates }) => {
   return null; // Component does not render anything
 };
 
+function ChangeView({ center, zoom }) {
+  const map = useMap();
+  map.setView(center, zoom);
+  return null;
+}
+
 const CustomMapContainer = ({
   busStops,
   geolocation,
   onLocationUpdate,
   clickOrGps,
+  geoLocation,
 }) => {
+  const [map, setMap] = useState();
+
+  useEffect(() => {
+    if (map) {
+      const tileLayerOffline = L.tileLayer.offline(
+        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          attribution:
+            '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+          minZoom: 13,
+        }
+      );
+
+      tileLayerOffline.addTo(map);
+
+      const controlSaveTiles = L.control.savetiles(tileLayerOffline, {
+        zoomlevels: [13, 14, 15, 16], // optional zoomlevels to save, default current zoomlevel
+      });
+
+      controlSaveTiles.addTo(map);
+    }
+  }, [map]);
+
+  const center = [
+    geoLocation.latitude || busStops[0].lat,
+    geoLocation.longitude || busStops[0].long,
+  ];
+
   return (
     <MapContainer
-      center={[busStops[0].lat, busStops[0].long]}
-      zoom={14}
+      center={center}
+      zoom={12}
       style={{ height: "100vh", width: "100vw" }}
+      whenCreated={setMap}
     >
+      <ChangeView center={center} zoom={12} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {clickOrGps === "Use Map Click" ? (
         <HandleMapClick setCoordinates={onLocationUpdate} />

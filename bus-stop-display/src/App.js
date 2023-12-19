@@ -71,9 +71,31 @@ function App() {
       setDistanceToNextStop(distance);
     }
 
-    if (!distanceHistory.includes(distance)) {
-      setDistanceHistory((prevHistory) => [...prevHistory, distance]);
+    setDistanceHistory((prevHistory) => {
+      if (prevHistory.includes(distance)) {
+        return prevHistory;
+      }
+      return [...prevHistory, distance];
+    });
+
+    if (distance <= 150 && audio) {
+      audio.play().catch((e) => {
+        console.error("Error playing audio:", e);
+        // Optionally, show an error message to the user
+      });
     }
+  }, [
+    geoLocation.latitude,
+    geoLocation.longitude,
+    currentStopIndex,
+    audio,
+    stops,
+    nextStop,
+    distanceToNextStop,
+  ]);
+
+  useEffect(() => {
+    // Determine if it's time to move to the next stop
     const newCurrentStopIndex = calculateNextStop(
       distanceHistory,
       stops,
@@ -84,26 +106,7 @@ function App() {
       setCurrentStopIndex(newCurrentStopIndex);
       playedStops.current.clear(); // Reset played stops for the new stop
     }
-
-    if (
-      distance <= 150 &&
-      audio &&
-      !playedStops.current.has(currentStopIndex)
-    ) {
-      audio.play().catch((e) => {
-        console.error("Error playing audio:", e);
-      });
-      playedStops.current.add(currentStopIndex);
-    }
-  }, [
-    geoLocation.latitude,
-    geoLocation.longitude,
-    currentStopIndex,
-    audio,
-    distanceHistory,
-    stops,
-    nextStop,
-  ]);
+  }, [currentStopIndex, distanceHistory, stops]);
 
   const handleStartRoute = () => {
     // ... other logic for starting the route
@@ -114,8 +117,6 @@ function App() {
       });
     }
   };
-
-  // center around current location (or map click ie. geolocation)
 
   return (
     <div className="App flex flex-col min-h-screen bg-white w-full">
@@ -128,16 +129,18 @@ function App() {
         reverse={reverse}
         setClickOrGps={setClickOrGps}
         clickOrGps={clickOrGps}
+        handleStartRoute={handleStartRoute}
       />
 
       <div className="px-10 py-3 flex flex-col gap-1">
-        <button onClick={handleStartRoute}>Start Route</button>
         <p>
           Current stop: <b>{currentStop.name}</b>
         </p>
-        <p>
-          Next stop: <b>{nextStop.name}</b>
-        </p>
+        {nextStop && (
+          <p>
+            Next stop: <b>{nextStop.name}</b>
+          </p>
+        )}
         <p>
           Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
         </p>
@@ -150,6 +153,7 @@ function App() {
 
       <div className="h-full w-full relative none">
         <MapContainer
+          geoLocation={geoLocation}
           clickOrGps={clickOrGps}
           onLocationUpdate={(lat, long) =>
             setClickCoordinates({ latitude: lat, longitude: long })

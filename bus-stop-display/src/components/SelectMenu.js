@@ -7,7 +7,7 @@ export const SelectMenu = ({ value, onChange, options }) => {
         id="simple-select"
         value={value}
         onChange={onChange}
-        className="mt-1 block w-full pl-3 pr-16 py-2 text-base border-gray-300 
+        className="block w-full pl-3 pr-16 py-2 text-base border-gray-300 
                    focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 
                    sm:text-sm rounded-md appearance-none bg-no-repeat" // Adjusted padding here
         style={{

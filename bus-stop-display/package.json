@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "daisyui": "^4.4.2",
     "fast-xml-parser": "^4.3.2",
+    "leaflet.offline": "^3.0.0-rc.4",
     "phosphor-react": "^1.4.1",
     "proj4": "^2.9.2",
     "react": "^18.2.0",

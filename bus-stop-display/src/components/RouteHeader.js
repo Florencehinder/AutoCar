@@ -10,6 +10,7 @@ const RouteHeader = ({
   onReverse,
   clickOrGps,
   setClickOrGps,
+  handleStartRoute,
 }) => {
   const _destination = reverse ? origin : destination;
   const _origin = reverse ? destination : origin;
@@ -24,7 +25,15 @@ const RouteHeader = ({
           <Swap />
         </button>
       </div>
-      <div>
+      <div className="flex gap-3 items-center">
+        {clickOrGps === "Use GPS" && (
+          <button
+            onClick={handleStartRoute}
+            className="whitespace-nowrap bg-green-500 hover:bg-green-700 text-white py-2 px-3 rounded text-sm self-center"
+          >
+            Start
+          </button>
+        )}
         <SelectMenu
           options={["Use GPS", "Use Map Click"]}
           value={clickOrGps}
