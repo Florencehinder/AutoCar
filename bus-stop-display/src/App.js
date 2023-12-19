@@ -46,10 +46,10 @@ function App() {
       const newAudio = new Audio(audioPath);
       setAudio(newAudio);
 
-      // Test audio playback directly
-      newAudio.play().catch((e) => {
-        console.error("Error directly playing audio:", e);
-      });
+      // // Test audio playback directly
+      // newAudio.play().catch((e) => {
+      //   console.error("Error directly playing audio:", e);
+      // });
 
       // Cleanup function
       return () => {
