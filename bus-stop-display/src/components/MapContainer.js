@@ -3,12 +3,14 @@ import { Bus } from "phosphor-react";
 import L from "leaflet";
 import "leaflet.offline";
 import { renderToStaticMarkup } from "react-dom/server";
+import { lineCoordinates } from "../data/custom/205/line_coordinates.js";
 import {
   MapContainer,
   TileLayer,
   Marker,
   useMapEvents,
   useMap,
+  Polyline,
 } from "react-leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
@@ -98,7 +100,7 @@ const CustomMapContainer = ({
         position={[geoLocation.latitude, geoLocation.longitude]}
         icon={busIcon}
       />
-      {/* <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} /> */}
+      <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} />
       {busStops.map((stop, index) => (
         <Marker
           key={index}
