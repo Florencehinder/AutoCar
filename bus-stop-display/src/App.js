@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import RouteHeader from "./components/RouteHeader"; // Adjust the path as necessary
 import MapContainer from "./components/MapContainer";
-import FourSixtySix from "./data/routes/466.json";
-import { stopPointRefs as BusStops } from "./data/custom/466/stop_point_refs";
+import TwoOhFive from "./data/routes/205.json";
+import BusStops from "./data/custom/205/stop_point_refs.json";
 import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
@@ -10,15 +10,15 @@ import { useLocationAndVelocity } from "./hooks";
 import calculateNextStop from "./utils/calculateNextStop";
 // import useAudioAlert from "./hooks/useAudioAlert.ts";
 
-const line = FourSixtySix.TransXChange.Services.Service.StandardService;
-const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
+const line = TwoOhFive.TransXChange.Services.Service.StandardService;
+const lineName = TwoOhFive.TransXChange.Services.Service.Lines.Line.LineName;
 
 function App() {
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const { latitude, longitude, velocity } = useLocationAndVelocity();
   const [distanceHistory, setDistanceHistory] = useState([]);
-  const [currentStopIndex, setCurrentStopIndex] = useState(34); // Assuming start at index 34
+  const [currentStopIndex, setCurrentStopIndex] = useState(1); // Assuming start at index 34
   const currentStop = stops[currentStopIndex];
   const nextStop =
     currentStopIndex < stops.length - 1 ? stops[currentStopIndex + 2] : null;
@@ -40,7 +40,7 @@ function App() {
 
   useEffect(() => {
     if (nextStop && nextStop.atcoCode) {
-      const audioPath = `./audio/466/${nextStop.atcoCode}.mp3`;
+      const audioPath = `./audio/${nextStop.atcoCode}.mp3`;
       console.log(`Loading audio from: ${audioPath}`); // Debugging
 
       const newAudio = new Audio(audioPath);
