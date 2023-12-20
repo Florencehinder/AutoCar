@@ -3,7 +3,6 @@ import { Bus } from "phosphor-react";
 import L from "leaflet";
 import "leaflet.offline";
 import { renderToStaticMarkup } from "react-dom/server";
-import { lineCoordinates } from "../data/custom/205/line_coordinates.js";
 import {
   MapContainer,
   TileLayer,
@@ -45,6 +44,7 @@ const CustomMapContainer = ({
   onLocationUpdate,
   clickOrGps,
   geoLocation,
+  lineCoordinates,
 }) => {
   const [map, setMap] = useState();
   const [zoomLevel, setZoomLevel] = useState(16); // Initialize zoom level state
