@@ -29,9 +29,12 @@ const HandleMapClick = ({ setCoordinates }) => {
   return null; // Component does not render anything
 };
 
-function ChangeView({ center, zoom }) {
+function ChangeView({ center }) {
   const map = useMap();
-  map.setView(center, zoom);
+  useEffect(() => {
+    map.setView(center, map.getZoom());
+  }, [center, map]);
+
   return null;
 }
 
@@ -42,6 +45,16 @@ const CustomMapContainer = ({
   geoLocation,
 }) => {
   const [map, setMap] = useState();
+  const [zoomLevel, setZoomLevel] = useState(16); // Initialize zoom level state
+
+  // When the map is created, save the map instance and set up event listeners
+  const handleMapCreated = (mapInstance) => {
+    setMap(mapInstance);
+
+    mapInstance.on("zoomend", () => {
+      setZoomLevel(mapInstance.getZoom()); // Update zoom level on user interaction
+    });
+  };
 
   useEffect(() => {
     if (map) {
@@ -72,11 +85,11 @@ const CustomMapContainer = ({
   return (
     <MapContainer
       center={center}
-      zoom={16}
+      zoom={zoomLevel}
       style={{ height: "100vh", width: "100vw" }}
-      whenCreated={setMap}
+      whenCreated={handleMapCreated}
     >
-      <ChangeView center={center} zoom={16} />
+      <ChangeView center={center} zoom={zoomLevel} />
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
       {clickOrGps === "Use Map Click" ? (
         <HandleMapClick setCoordinates={onLocationUpdate} />
