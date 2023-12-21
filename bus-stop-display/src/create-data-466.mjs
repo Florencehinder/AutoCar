@@ -73,10 +73,12 @@ export function getOrderedStopPointRefs(route, naptanData, routeDescription) {
   const routeSections = route.TransXChange.RouteSections.RouteSection;
   const orderedStopPointRefs = [];
 
-  for (const [i, r] of routeSectionRefs.RouteSectionRef.entries()) {
-    const routeSection = routeSections.find((section) => section._id === r);
+  for (const routeSectionRef of routeSectionRefs.RouteSectionRef) {
+    const routeSection = routeSections.find(
+      (section) => section._id === routeSectionRef
+    );
 
-    for (const stopPointRef of routeSection.RouteLink) {
+    for (const [i, stopPointRef] of routeSection.RouteLink.entries()) {
       const fromNaptanData = naptanData.NaPTAN.StopPoints.StopPoint.find(
         (point) => {
           return point.AtcoCode === stopPointRef.From.StopPointRef;
@@ -147,7 +149,7 @@ console.log(
   getOrderedStopPointRefs(
     FourSixtySixRoute,
     londonNaptanData,
-    "Westway_ Caterham - Addington Village Interchange"
+    "Addington Village Interchange - Westway_ Caterham"
   )
 );
 

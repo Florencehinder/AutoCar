@@ -55,6 +55,9 @@ function App() {
   }, [nextStop]);
 
   useEffect(() => {
+    if (!nextStop) {
+      return;
+    }
     const distance = getHaversineDistance(
       geoLocation.latitude,
       geoLocation.longitude,
