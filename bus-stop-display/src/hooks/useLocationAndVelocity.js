@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { getHaversineDistance } from "../utils/getHaversineDistance";
+import { useInterval } from "./useInterval";
 
 export function useLocationAndVelocity() {
   const [locationData, setLocationData] = useState({
@@ -11,9 +12,9 @@ export function useLocationAndVelocity() {
   const readingsQueueRef = useRef([]);
   const previousLocationRef = useRef(null);
 
-  useEffect(() => {
+  useInterval(() => {
     if (navigator.geolocation) {
-      watchIdRef.current = navigator.geolocation.watchPosition(
+      watchIdRef.current = navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude, accuracy } = position.coords;
           const currentTime = position.timestamp;
@@ -67,6 +68,9 @@ export function useLocationAndVelocity() {
         },
         (error) => {
           console.error("Error retrieving location:", error);
+        },
+        {
+          enableHighAccuracy: true,
         }
       );
     } else {
@@ -78,7 +82,7 @@ export function useLocationAndVelocity() {
         navigator.geolocation.clearWatch(watchIdRef.current);
       }
     };
-  }, []);
+  }, 1000);
 
   return locationData;
 }
