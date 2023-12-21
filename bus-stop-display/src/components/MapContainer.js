@@ -9,6 +9,7 @@ import {
   Marker,
   useMapEvents,
   useMap,
+  Polyline,
 } from "react-leaflet";
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 
@@ -99,7 +100,7 @@ const CustomMapContainer = ({
         position={[geoLocation.latitude, geoLocation.longitude]}
         icon={busIcon}
       />
-      {/* <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} /> */}
+      <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} />
       {busStops.map((stop, index) => (
         <Marker
           key={index}
