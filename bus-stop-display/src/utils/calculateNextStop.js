@@ -2,10 +2,10 @@
 
 // This function determines if it's time to update to the next stop.
 // It requires a history of distances to the next stop and the stops array.
-function calculateNextStop(distanceHistory, stops, currentStopIndex) {
+export function shouldMoveToNextStop(distanceHistory, stops, currentStopIndex) {
   if (distanceHistory.length < 2) {
     // Need at least two readings to determine a trend
-    return currentStopIndex;
+    return false;
   }
 
   const latestDistance = distanceHistory[distanceHistory.length - 1];
@@ -15,14 +15,9 @@ function calculateNextStop(distanceHistory, stops, currentStopIndex) {
   // and the latest distance is less than 100 meters
   if (latestDistance > previousDistance && latestDistance < 100) {
     // Move to the next stop if there is one
-    return currentStopIndex < stops.length - 1
-      ? currentStopIndex +1
-      : // super weird but for some reason we have to add two to the stop index for it to work? I don't really understand why.
-        currentStopIndex;
+    return true;
   }
 
   // No change in stop
-  return currentStopIndex;
+  return false;
 }
-
-export default calculateNextStop;
