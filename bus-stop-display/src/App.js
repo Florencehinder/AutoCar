@@ -18,7 +18,7 @@ function App() {
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const { latitude, longitude, velocity } = useLocationAndVelocity();
   const [distanceHistory, setDistanceHistory] = useState([]);
-  const [currentStopIndex, setCurrentStopIndex] = useState(34); // Assuming start at index 0
+  const [currentStopIndex, setCurrentStopIndex] = useState(25); // Assuming start at index 0
   const currentStop = stops[currentStopIndex];
   const nextStop =
     currentStopIndex < stops.length - 1 ? stops[currentStopIndex + 1] : null;
