@@ -17,6 +17,11 @@ function App() {
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const { latitude, longitude, velocity } = useLocationAndVelocity();
+  console.log("Updated position and velocity", {
+    latitude,
+    longitude,
+    velocity,
+  });
   const [distanceHistory, setDistanceHistory] = useState([]);
   const [currentStopIndex, setCurrentStopIndex] = useState(0); // Assuming start at index 0
   const currentStop = stops[currentStopIndex];
