@@ -17,14 +17,6 @@ export const stopPointRefs = {
       long: -0.03892406176538876,
     },
     {
-      directionIndex: 1,
-      name: "Addington Park",
-      atcoCode: "490003094W",
-      naptanCode: "75142",
-      lat: 51.35396040041646,
-      long: -0.03892406176538876,
-    },
-    {
       directionIndex: 2,
       name: "Gravel Hill Tram Stop",
       atcoCode: "490002041A",
