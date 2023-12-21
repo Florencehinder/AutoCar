@@ -8,12 +8,12 @@ import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
 import { useLocationAndVelocity } from "./hooks";
 import { shouldMoveToNextStop } from "./utils/calculateNextStop";
-// import useAudioAlert from "./hooks/useAudioAlert.ts";
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
 const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
 
 function App() {
+  const route = 466;
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
   const { latitude, longitude, velocity } = useLocationAndVelocity();
@@ -40,16 +40,11 @@ function App() {
 
   useEffect(() => {
     if (nextStop && nextStop.atcoCode) {
-      const audioPath = `./audio/${nextStop.atcoCode}.mp3`;
+      const audioPath = `./audio/${route}/${nextStop.atcoCode}.mp3`;
       console.log(`Loading audio from: ${audioPath}`); // Debugging
 
       const newAudio = new Audio(audioPath);
       setAudio(newAudio);
-
-      // // Test audio playback directly
-      // newAudio.play().catch((e) => {
-      //   console.error("Error directly playing audio:", e);
-      // });
 
       // Cleanup function
       return () => {
