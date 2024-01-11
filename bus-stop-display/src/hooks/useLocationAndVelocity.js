@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { getHaversineDistance } from "../utils/getHaversineDistance";
+// import { getHaversineDistance } from "../utils/getHaversineDistance";
 
 export function useLocationAndVelocity() {
   const [locationData, setLocationData] = useState({
     latitude: 0,
-    longitude: 0,
-    velocity: 0,
+    longitude: 0
   });
   const watchIdRef = useRef(null);
   const previousLocationRef = useRef(null);
@@ -15,7 +14,6 @@ export function useLocationAndVelocity() {
       const { latitude, longitude } = position.coords;
       const currentTime = position.timestamp;
 
-      let velocity = 0;
       const previousLocation = previousLocationRef.current;
 
       if (previousLocation) {
@@ -24,13 +22,12 @@ export function useLocationAndVelocity() {
         // Log the time elapsed between this and the previous reading
         console.log(`Time elapsed since last reading: ${timeElapsed} seconds`);
 
-        const distance = getHaversineDistance(
-          previousLocation.latitude,
-          previousLocation.longitude,
-          latitude,
-          longitude
-        );
-        velocity = timeElapsed > 0 ? distance / timeElapsed : 0; // m/s
+        // const distance = getHaversineDistance(
+        //   previousLocation.latitude,
+        //   previousLocation.longitude,
+        //   latitude,
+        //   longitude
+        // );
       }
 
       // Log the new GPS point
@@ -38,7 +35,7 @@ export function useLocationAndVelocity() {
         `New GPS Point: Latitude: ${latitude}, Longitude: ${longitude}`
       );
 
-      setLocationData({ latitude, longitude, velocity });
+      setLocationData({ latitude, longitude});
       previousLocationRef.current = {
         latitude,
         longitude,

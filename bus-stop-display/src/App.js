@@ -16,7 +16,7 @@ function App() {
   const route = 466;
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
-  const { latitude, longitude, velocity } = useLocationAndVelocity();
+  const { latitude, longitude } = useLocationAndVelocity();
   const [distanceHistory, setDistanceHistory] = useState([]);
   const [currentStopIndex, setCurrentStopIndex] = useState(25); // Assuming start at index 0
   const currentStop = stops[currentStopIndex];
@@ -148,7 +148,7 @@ function App() {
         </p>
         {clickOrGps === "Use GPS" ? (
           <p>
-            Current velocity: <b>{velocity.toFixed(0)} m/s</b>
+            {/* Current velocity: <b>{velocity.toFixed(0)} m/s</b> */}
           </p>
         ) : null}
       </div>
