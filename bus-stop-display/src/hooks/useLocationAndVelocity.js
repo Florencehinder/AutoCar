@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getHaversineDistance } from "../utils/getHaversineDistance";
-import { useInterval } from "./useInterval";
 
 export function useLocationAndVelocity() {
   const [locationData, setLocationData] = useState({
@@ -9,68 +8,56 @@ export function useLocationAndVelocity() {
     velocity: 0,
   });
   const watchIdRef = useRef(null);
-  const readingsQueueRef = useRef([]);
   const previousLocationRef = useRef(null);
 
-  useInterval(() => {
+  useEffect(() => {
+    const handleSuccess = (position) => {
+      const { latitude, longitude } = position.coords;
+      const currentTime = position.timestamp;
+
+      let velocity = 0;
+      const previousLocation = previousLocationRef.current;
+
+      if (previousLocation) {
+        const timeElapsed = (currentTime - previousLocation.timestamp) / 1000; // Convert to seconds
+
+        // Log the time elapsed between this and the previous reading
+        console.log(`Time elapsed since last reading: ${timeElapsed} seconds`);
+
+        const distance = getHaversineDistance(
+          previousLocation.latitude,
+          previousLocation.longitude,
+          latitude,
+          longitude
+        );
+        velocity = timeElapsed > 0 ? distance / timeElapsed : 0; // m/s
+      }
+
+      // Log the new GPS point
+      console.log(
+        `New GPS Point: Latitude: ${latitude}, Longitude: ${longitude}`
+      );
+
+      setLocationData({ latitude, longitude, velocity });
+      previousLocationRef.current = {
+        latitude,
+        longitude,
+        timestamp: currentTime,
+      };
+    };
+
+    const handleError = (error) => {
+      console.error("Error retrieving location:", error);
+    };
+
     if (navigator.geolocation) {
-      watchIdRef.current = navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude, accuracy } = position.coords;
-          const currentTime = position.timestamp;
-
-          if (!isNaN(latitude) && !isNaN(longitude)) {
-            const newReading = {
-              latitude,
-              longitude,
-              accuracy,
-              timestamp: currentTime,
-            };
-            readingsQueueRef.current.push(newReading);
-
-            if (readingsQueueRef.current.length > 100) {
-              readingsQueueRef.current.shift();
-            }
-
-            const sum = readingsQueueRef.current.reduce(
-              (acc, reading) => ({
-                latitude: acc.latitude + reading.latitude,
-                longitude: acc.longitude + reading.longitude,
-              }),
-              { latitude: 0, longitude: 0 }
-            );
-            const count = readingsQueueRef.current.length;
-            const averageLocation = {
-              latitude: sum.latitude / count,
-              longitude: sum.longitude / count,
-            };
-
-            let velocity = 0;
-            const previousLocation = previousLocationRef.current;
-
-            if (previousLocation) {
-              const timeElapsed =
-                (currentTime - previousLocation.timestamp) / 1000; // Convert to seconds
-              const distance = getHaversineDistance(
-                previousLocation.latitude,
-                previousLocation.longitude,
-                newReading.latitude,
-                newReading.longitude
-              );
-
-              velocity = timeElapsed > 0 ? distance / timeElapsed : 0; // m/s
-            }
-            setLocationData({ ...averageLocation, velocity });
-            previousLocationRef.current = newReading;
-          } else {
-            console.error("Invalid coordinates:", latitude, longitude);
-          }
-        },
-        (error) => {
-          console.error("Error retrieving location:", error);
-        },
+      watchIdRef.current = navigator.geolocation.watchPosition(
+        handleSuccess,
+        handleError,
         {
-          enableHighAccuracy: true,
+          enableHighAccuracy: false,
+          timeout: 5000,
+          maximumAge: 0,
         }
       );
     } else {
@@ -82,7 +69,7 @@ export function useLocationAndVelocity() {
         navigator.geolocation.clearWatch(watchIdRef.current);
       }
     };
-  }, 1000);
+  }, []);
 
   return locationData;
 }
