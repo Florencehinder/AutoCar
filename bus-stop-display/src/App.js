@@ -6,7 +6,7 @@ import { stopPointRefs as BusStops } from "./data/custom/466/stop_point_refs";
 import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
-import { useLocationAndVelocity } from "./hooks";
+import { useLocation } from "./hooks";
 import { shouldMoveToNextStop } from "./utils/calculateNextStop";
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
@@ -16,7 +16,7 @@ function App() {
   const route = 466;
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
-  const { latitude, longitude } = useLocationAndVelocity();
+  const { latitude, longitude } = useLocation();
   const [distanceHistory, setDistanceHistory] = useState([]);
   const [currentStopIndex, setCurrentStopIndex] = useState(25); // Assuming start at index 0
   const currentStop = stops[currentStopIndex];
@@ -148,7 +148,6 @@ function App() {
         </p>
         {clickOrGps === "Use GPS" ? (
           <p>
-            {/* Current velocity: <b>{velocity.toFixed(0)} m/s</b> */}
           </p>
         ) : null}
       </div>
