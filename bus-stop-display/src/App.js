@@ -111,7 +111,26 @@ function App() {
   }, [distanceHistory]);
 
   const handleStartRoute = () => {
-    // ... other logic for starting the route
+    // Find the nearest stop
+    let shortestDistance = Number.MAX_VALUE;
+    const nearestStopIndex = stops.reduce((nearestIndex, stop, index) => {
+      const distanceToStop = getHaversineDistance(
+        geoLocation.latitude,
+        geoLocation.longitude,
+        stop.lat,
+        stop.long
+      );
+      if (nearestIndex === null || distanceToStop < shortestDistance) {
+        shortestDistance = distanceToStop;
+        return index;
+      }
+      return nearestIndex;
+    }, null);
+
+    // Set the nearest stop as the current stop
+    if (nearestStopIndex !== null) {
+      setCurrentStopIndex(nearestStopIndex);
+    }
 
     if (audio) {
       audio.play().catch((e) => {
@@ -146,10 +165,7 @@ function App() {
         <p>
           Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
         </p>
-        {clickOrGps === "Use GPS" ? (
-          <p>
-          </p>
-        ) : null}
+        {clickOrGps === "Use GPS" ? <p></p> : null}
       </div>
 
       <div className="h-full w-full relative none">

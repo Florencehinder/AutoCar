@@ -31,7 +31,7 @@ const RouteHeader = ({
             onClick={handleStartRoute}
             className="whitespace-nowrap bg-green-500 hover:bg-green-700 text-white py-2 px-3 rounded text-sm self-center"
           >
-            Start
+            Refresh
           </button>
         )}
         <SelectMenu
