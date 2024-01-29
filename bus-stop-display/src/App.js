@@ -8,6 +8,7 @@ import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
 import { useLocation } from "./hooks";
 import { shouldMoveToNextStop } from "./utils/calculateNextStop";
+import 'leaflet.offline';
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
 const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
