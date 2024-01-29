@@ -35,6 +35,11 @@ function App() {
 
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
+  const handleResetAudio = () => {
+    playedStops.current = new Set();
+    setAudio(null); // Reset the audio state if needed
+    // Add any other state resets here if necessary
+  };
   const [audio, setAudio] = useState(null);
   const playedStops = useRef(new Set());
 
@@ -151,6 +156,7 @@ function App() {
         setClickOrGps={setClickOrGps}
         clickOrGps={clickOrGps}
         handleStartRoute={handleStartRoute}
+        handleResetAudio={handleResetAudio}
       />
 
       <div className="px-10 py-3 flex flex-col gap-1">
