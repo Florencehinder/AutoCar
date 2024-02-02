@@ -1,11 +1,8 @@
-// useAudioAlert.ts
+// useAudioAlert.js
 import { useEffect, useState } from "react";
 
-const useAudioAlert = (
-  distanceToNextStop: number,
-  audioFile: string
-): [boolean, React.Dispatch<React.SetStateAction<boolean>>] => {
-  const [audioPlayed, setAudioPlayed] = useState<boolean>(false);
+const useAudioAlert = (distanceToNextStop, audioFile) => {
+  const [audioPlayed, setAudioPlayed] = useState(false);
 
   useEffect(() => {
     if (distanceToNextStop < 150 && !audioPlayed) {

@@ -6,8 +6,9 @@ import { stopPointRefs as BusStops } from "./data/custom/466/stop_point_refs";
 import "leaflet/dist/leaflet.css";
 import { getHaversineDistance } from "./utils/getHaversineDistance.js";
 import { lineCoordinates } from "./data/custom/205/line_coordinates";
-import { useLocationAndVelocity } from "./hooks";
+import { useLocation } from "./hooks";
 import { shouldMoveToNextStop } from "./utils/calculateNextStop";
+import 'leaflet.offline';
 
 const line = FourSixtySix.TransXChange.Services.Service.StandardService;
 const lineName = FourSixtySix.TransXChange.Services.Service.Lines.Line.LineName;
@@ -16,7 +17,7 @@ function App() {
   const route = 466;
   const [reverse, setReverse] = useState(false);
   const stops = reverse ? BusStops.outbound : BusStops.inbound;
-  const { latitude, longitude, velocity } = useLocationAndVelocity();
+  const { latitude, longitude } = useLocation();
   const [distanceHistory, setDistanceHistory] = useState([]);
   const [currentStopIndex, setCurrentStopIndex] = useState(25); // Assuming start at index 0
   const currentStop = stops[currentStopIndex];
@@ -35,6 +36,11 @@ function App() {
 
   // State to store the calculated distance
   const [distanceToNextStop, setDistanceToNextStop] = useState(0);
+  const handleResetAudio = () => {
+    playedStops.current = new Set();
+    setAudio(null); // Reset the audio state if needed
+    // Add any other state resets here if necessary
+  };
   const [audio, setAudio] = useState(null);
   const playedStops = useRef(new Set());
 
@@ -111,7 +117,26 @@ function App() {
   }, [distanceHistory]);
 
   const handleStartRoute = () => {
-    // ... other logic for starting the route
+    // Find the nearest stop
+    let shortestDistance = Number.MAX_VALUE;
+    const nearestStopIndex = stops.reduce((nearestIndex, stop, index) => {
+      const distanceToStop = getHaversineDistance(
+        geoLocation.latitude,
+        geoLocation.longitude,
+        stop.lat,
+        stop.long
+      );
+      if (nearestIndex === null || distanceToStop < shortestDistance) {
+        shortestDistance = distanceToStop;
+        return index;
+      }
+      return nearestIndex;
+    }, null);
+
+    // Set the nearest stop as the current stop
+    if (nearestStopIndex !== null) {
+      setCurrentStopIndex(nearestStopIndex);
+    }
 
     if (audio) {
       audio.play().catch((e) => {
@@ -132,6 +157,7 @@ function App() {
         setClickOrGps={setClickOrGps}
         clickOrGps={clickOrGps}
         handleStartRoute={handleStartRoute}
+        handleResetAudio={handleResetAudio}
       />
 
       <div className="px-10 py-3 flex flex-col gap-1">
@@ -146,11 +172,7 @@ function App() {
         <p>
           Distance to next stop: <b>{distanceToNextStop.toFixed(0)} meters</b>
         </p>
-        {clickOrGps === "Use GPS" ? (
-          <p>
-            Current velocity: <b>{velocity.toFixed(0)} m/s</b>
-          </p>
-        ) : null}
+        {clickOrGps === "Use GPS" ? <p></p> : null}
       </div>
 
       <div className="h-full w-full relative none">

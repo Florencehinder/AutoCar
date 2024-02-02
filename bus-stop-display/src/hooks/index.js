@@ -1,3 +1,3 @@
-export * from "./useGeoLocation";
 export * from "./useInterval";
-export * from "./useLocationAndVelocity";
+export * from "./useLocation";
+export * from "./useAudioAlert.js"

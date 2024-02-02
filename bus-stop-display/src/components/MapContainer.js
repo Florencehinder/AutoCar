@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Bus } from "phosphor-react";
 import L from "leaflet";
-import "leaflet.offline";
+import "leaflet.offline"; // Import Leaflet.Offline
 import { renderToStaticMarkup } from "react-dom/server";
 import {
   MapContainer,
@@ -59,6 +59,7 @@ const CustomMapContainer = ({
 
   useEffect(() => {
     if (map) {
+      // Create a Leaflet.Offline layer and configure it
       const tileLayerOffline = L.tileLayer.offline(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
@@ -68,12 +69,15 @@ const CustomMapContainer = ({
         }
       );
 
+      // Add the Leaflet.Offline layer to the map
       tileLayerOffline.addTo(map);
 
+      // Create a control to save tiles
       const controlSaveTiles = L.control.savetiles(tileLayerOffline, {
-        zoomlevels: [13, 14, 15, 16], // optional zoomlevels to save, default current zoomlevel
+        zoomlevels: [16], // optional zoomlevels to save, default current zoomlevel
       });
 
+      // Add the control to the map
       controlSaveTiles.addTo(map);
     }
   }, [map]);
@@ -99,7 +103,6 @@ const CustomMapContainer = ({
         position={[geoLocation.latitude, geoLocation.longitude]}
         icon={busIcon}
       />
-      {/* <Polyline pathOptions={{ color: "blue" }} positions={lineCoordinates} /> */}
       {busStops.map((stop, index) => (
         <Marker
           key={index}

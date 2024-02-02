@@ -11,6 +11,7 @@ const RouteHeader = ({
   clickOrGps,
   setClickOrGps,
   handleStartRoute,
+  handleResetAudio,
 }) => {
   const _destination = reverse ? origin : destination;
   const _origin = reverse ? destination : origin;
@@ -26,12 +27,15 @@ const RouteHeader = ({
         </button>
       </div>
       <div className="flex gap-3 items-center">
-        {clickOrGps === "Use GPS" && (
+        {(clickOrGps === "Use GPS" || clickOrGps === "Use Map Click") && (
           <button
-            onClick={handleStartRoute}
+            onClick={() => {
+              handleStartRoute();
+              handleResetAudio(); // Call the reset handler
+            }}
             className="whitespace-nowrap bg-green-500 hover:bg-green-700 text-white py-2 px-3 rounded text-sm self-center"
           >
-            Start
+            Refresh
           </button>
         )}
         <SelectMenu
